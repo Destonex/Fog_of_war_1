@@ -7,10 +7,13 @@ using System.Linq;
 using UnityEngine.AI;
 using UnityEngine.Rendering.PostProcessing;
 using System.Text.RegularExpressions;
+using UnityEditor;
+using UnityEngine.EventSystems;
 
 public class Button_Canvas : MonoBehaviour
 {
-    public PostProcessVolume postProcessVolume;
+    public PostProcessVolume postProcessVolume; public WeaponManager weaponScript;
+    public DrawCameraMode k; public Button ShadedWireframe; public bool WireframeIndicator=true; Button btn;
     public GameObject fpss;
     public GameObject fps;
     public GameObject camera;
@@ -18,13 +21,11 @@ public class Button_Canvas : MonoBehaviour
     public GameObject fon;
     public GameObject cd;
 
-
-    public WeaponManager weaponScript;
     public GameObject weapon;
     //public GameObject canvas;
 
     public GameObject coordinates;
-
+    
     public bool vsync = false;
     bool audio = false;
     public GameObject[] MRSV;
@@ -93,7 +94,7 @@ public class Button_Canvas : MonoBehaviour
             coordinates.SetActive(true);
             
         }
-}
+    }
 
 
         if (Input.GetKeyDown("`") && canvas == true) {
