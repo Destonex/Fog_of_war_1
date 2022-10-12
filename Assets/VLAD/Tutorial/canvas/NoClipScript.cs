@@ -32,30 +32,23 @@ public class NoClipScript : MonoBehaviour
     if(!EmptyNoclip.activeInHierarchy)
     {
         cc.enabled=false; 
-        //OnEnable();
         NewCC();
         
-        //NoclipScript.enabled=false;
     }
     else if (EmptyNoclip.activeInHierarchy)
     {
         cc.enabled=true; 
-        //OnDisable();
         
-        //NoclipScript.enabled=true;
     }
-    //NewCC();
    }
 
    public void NoclipButtonClick()
    {
         if(EmptyNoclip.activeInHierarchy == true){
-            // // NoclipScript.GetComponent<FirstPersonController>().SetActive(false);
             EmptyNoclip.SetActive(false);
         }
         else
         {
-        // //    NoclipScript.GetComponent<FirstPersonController>().SetActive(true);
             EmptyNoclip.SetActive(true);
         }
    }

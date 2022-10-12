@@ -12,8 +12,9 @@ using UnityEngine.EventSystems;
 
 public class Button_Canvas : MonoBehaviour
 {
-    public PostProcessVolume postProcessVolume; public WeaponManager weaponScript;
-    public DrawCameraMode k; public Button ShadedWireframe; public bool WireframeIndicator=true; Button btn;
+    public PostProcessVolume postProcessVolume; 
+    public WeaponManager weaponScript;
+    public DrawCameraMode k; 
     public GameObject fpss;
     public GameObject fps;
     public GameObject camera;
@@ -25,6 +26,8 @@ public class Button_Canvas : MonoBehaviour
     //public GameObject canvas;
 
     public GameObject coordinates;
+    
+    //public GameObject Wireframe;
     
     public bool vsync = false;
     bool audio = false;
@@ -86,15 +89,15 @@ public class Button_Canvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("r")){
-    if(coordinates.activeSelf == true){
-            coordinates.SetActive(false);
+            if(Input.GetKeyDown("r")){
+        if(coordinates.activeSelf == true){
+                coordinates.SetActive(false);
+            }
+            else{
+                coordinates.SetActive(true);
+                
+            }
         }
-        else{
-            coordinates.SetActive(true);
-            
-        }
-    }
 
 
         if (Input.GetKeyDown("`") && canvas == true) {

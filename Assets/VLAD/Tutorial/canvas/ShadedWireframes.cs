@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using UnityEditor;
 using UnityEngine.EventSystems;
 
+//using UnityEditor.GameView;
+
 public class ShadedWireframes : MonoBehaviour
 {
     public DrawCameraMode k;
@@ -16,8 +18,8 @@ public class ShadedWireframes : MonoBehaviour
    
     public void ShadedWireframeOn()
     {
-         DrawCameraMode drawMode = k;
-         SceneView.lastActiveSceneView.cameraMode = SceneView.GetBuiltinCameraMode(drawMode);
+         //k = DrawCameraMode.Wireframe;
+         //SceneView.lastActiveSceneView.cameraMode = SceneView.GetBuiltinCameraMode(k);
 
         if (WireframeIndicator==true)
         {

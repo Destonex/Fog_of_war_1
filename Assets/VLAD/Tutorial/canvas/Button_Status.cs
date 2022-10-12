@@ -8,7 +8,7 @@ using UnityEngine.AI;
 using UnityEngine.Rendering.PostProcessing;
 using System.Text.RegularExpressions;
 
-public class Button_Status : MonoBehaviour
+public class Button_Status : MonoBehaviour 
 {
     public Button_Canvas button_canvas;
     public GameObject toggle_fps;
@@ -17,6 +17,18 @@ public class Button_Status : MonoBehaviour
     public GameObject toggle_Audio;
     public GameObject toggle_Weapon;
     public GameObject toggle_Coordinate;
+    public GameObject toggle_Wireframe;
+    public ShadedWireframes shadedWireframes;
+    public GameObject toggle_Noclip;
+    public NoClipScript noClipScript;
+    public GameObject toggle_Overlay;
+    public OverlayToggleScript overlayToggleScript;
+
+
+    
+    //public GameObject toggle_Wireframe;
+    //public GameObject EmptyWireframe;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,7 +75,32 @@ public class Button_Status : MonoBehaviour
         }
         else{
             toggle_Coordinate.SetActive(false);
-            
         }
-    }
+
+        if (shadedWireframes.WireframeIndicator==true)
+        {
+            toggle_Wireframe.SetActive(false);
+        }
+        else if (shadedWireframes.WireframeIndicator==false)
+        {
+            toggle_Wireframe.SetActive(true);
+        }
+
+        if(noClipScript.EmptyNoclip.activeInHierarchy == true){
+            toggle_Noclip.SetActive(false);
+        }
+        else
+        {
+            toggle_Noclip.SetActive(true);
+        }
+
+        if(overlayToggleScript.EmptyOverlayToggle.activeInHierarchy){
+            toggle_Overlay.SetActive(false);            
+        }
+        else
+        {
+            toggle_Overlay.SetActive(true);         
+        }
+    }    
 }
+
