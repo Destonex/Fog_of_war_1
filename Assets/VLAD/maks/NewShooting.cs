@@ -12,7 +12,7 @@ public class NewShooting : MonoBehaviour
     public float force = 155f;
     public float range = 15f;
     public ParticleSystem muzzleFlash;
-    public Transform bulletSpawn;
+    public Transform bulletSpawn;//will delete
     public AudioClip shotSFX;
     public AudioSource _audioSource;
     public GameObject[] hitEffect = new GameObject[5];
