@@ -1,15 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
-using UnityEngine.EventSystems;
-
-//using UnityEditor.GameView;
 
 public class ShadedWireframes : MonoBehaviour
 {
-    public DrawCameraMode k;
     public Button ShadedWireframe; 
 
     public bool WireframeIndicator=true;
@@ -18,8 +12,6 @@ public class ShadedWireframes : MonoBehaviour
    
     public void ShadedWireframeOn()
     {
-         //k = DrawCameraMode.Wireframe;
-         //SceneView.lastActiveSceneView.cameraMode = SceneView.GetBuiltinCameraMode(k);
 
         if (WireframeIndicator==true)
         {
@@ -27,7 +19,7 @@ public class ShadedWireframes : MonoBehaviour
         }
         else if (WireframeIndicator==false)
         {
-            WireframeIndicator=true;
+            WireframeIndicator = true;
         }
     }
 
