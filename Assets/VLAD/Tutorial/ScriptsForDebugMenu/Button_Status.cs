@@ -23,9 +23,11 @@ public class Button_Status : MonoBehaviour
     public NoClipScript noClipScript;
     public GameObject toggle_Overlay;
     public OverlayToggleScript overlayToggleScript;
+    public GameObject toggle_Godmode;
+    public GodmodeScript godmodeScript;
 
 
-    
+
     //public GameObject toggle_Wireframe;
     //public GameObject EmptyWireframe;
 
@@ -100,6 +102,15 @@ public class Button_Status : MonoBehaviour
         else
         {
             toggle_Overlay.SetActive(true);         
+        }
+
+        if (godmodeScript.EmptyGodmode.activeInHierarchy == true)
+        {
+            toggle_Godmode.SetActive(false);
+        }
+        else
+        {
+            toggle_Godmode.SetActive(true);
         }
     }    
 }
