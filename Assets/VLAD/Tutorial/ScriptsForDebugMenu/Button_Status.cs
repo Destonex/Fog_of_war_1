@@ -61,9 +61,9 @@ public class Button_Status : MonoBehaviour
 
 
         if(button_canvas.cd.GetComponent<AudioListener>().enabled == false)
-            toggle_Audio.SetActive(true);
-        else
             toggle_Audio.SetActive(false);
+        else
+            toggle_Audio.SetActive(true);
 
         
         if(button_canvas.weaponScript.enabled == true)
