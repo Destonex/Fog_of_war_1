@@ -93,7 +93,7 @@ void Anim(){
 
         if(Physics.Raycast(_cam.transform.position, _cam.transform.forward, out hit, range))
         {
-              if(hit.transform.gameObject.tag == "Wood")
+                if(hit.transform.gameObject.tag == "Wood")
                     impact = Instantiate(hitEffect[0], hit.point, Quaternion.LookRotation(hit.normal));
                 else if(hit.transform.gameObject.tag == "Stone")
                     impact = Instantiate(hitEffect[1], hit.point, Quaternion.LookRotation(hit.normal));
