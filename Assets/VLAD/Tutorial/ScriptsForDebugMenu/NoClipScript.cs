@@ -5,13 +5,13 @@ using UnityEngine.UI;
 
 public class NoClipScript : MonoBehaviour
 {
-// //    public FirstPersonController fps;
-   public GameObject NoclipScript;
+
+
    public GameObject EmptyNoclip;
    private Vector3 _angles;
-   public float speed = 1.0f;
-   public float fastSpeed = 2.0f;
-   public float mouseSpeed = 4.0f;
+   public float speed = 0.55f;
+   public float fastSpeed = 1.25f;
+   public float mouseSpeed = 2.5f;
 
     public CharacterController cc;
    public void Start()
@@ -19,16 +19,7 @@ public class NoClipScript : MonoBehaviour
         cc = GetComponent<CharacterController>();
     }
  
-   private void OnEnable() {
-       //_angles = transform.eulerAngles;
-       Cursor.lockState = CursorLockMode.Locked;
-   }
- 
-   private void OnDisable() { 
-    Cursor.lockState = CursorLockMode.None; 
-   }
- 
-   private void Update() {
+   void Update() {
     if(!EmptyNoclip.activeInHierarchy)
     {
         cc.enabled=false; 
