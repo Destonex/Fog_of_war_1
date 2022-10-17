@@ -13,7 +13,7 @@ using UnityEngine.EventSystems;
 public class Button_Canvas : MonoBehaviour
 {
     public PostProcessVolume postProcessVolume; 
-    public WeaponManager weaponScript;
+    public NewShooting weaponScript;
     public DrawCameraMode k; 
     public GameObject fpss;
     public GameObject fps;
