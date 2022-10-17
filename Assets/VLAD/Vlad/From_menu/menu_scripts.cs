@@ -16,11 +16,11 @@ public class menu_scripts : MonoBehaviour
     Cursor.lockState = CursorLockMode.None;
     }
    public void StartGame(){
-        SceneManager.LoadScene("SampleScene 1");
+        SceneManager.LoadScene("Forest");
   }
 
    public void LoadGame(){
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("Villege");
   }
     public void ExitGame(){
       Application.Quit();  

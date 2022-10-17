@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Menu3d.unity
+    guid: cd81c0eaba3005f4aa2b8b558553be44
+  - enabled: 1
+    path: Assets/Scenes/Forest.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Village.unity
+    guid: 69d9f74e11f4f9847bddee055cafe763
+  - enabled: 1
+    path: Assets/Scenes/Polotsk_A1.unity
+    guid: fa02a87f45ec28e4cb400e5445710067
   m_configObjects: {}
