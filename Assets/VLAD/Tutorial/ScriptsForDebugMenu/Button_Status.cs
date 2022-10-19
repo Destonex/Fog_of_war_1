@@ -25,19 +25,13 @@ public class Button_Status : MonoBehaviour
     public OverlayToggleScript overlayToggleScript;
     public GameObject toggle_Godmode;
     public GodmodeScript godmodeScript;
-
-
-
-    //public GameObject toggle_Wireframe;
-    //public GameObject EmptyWireframe;
-
-    // Start is called before the first frame update
+    public GameObject toggle_Pause;
+    public PauseScript PauseScript;
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
         if(button_canvas.fpss.activeSelf == false)
@@ -61,9 +55,9 @@ public class Button_Status : MonoBehaviour
 
 
         if(button_canvas.cd.GetComponent<AudioListener>().enabled == false)
-            toggle_Audio.SetActive(false);
-        else
             toggle_Audio.SetActive(true);
+        else
+            toggle_Audio.SetActive(false);
 
         
         if(button_canvas.weaponScript.enabled == true)
@@ -111,6 +105,15 @@ public class Button_Status : MonoBehaviour
         else
         {
             toggle_Godmode.SetActive(true);
+        }
+
+        if (PauseScript.SmallCanvas.activeInHierarchy == true)
+        {
+            toggle_Pause.SetActive(true);
+        }
+        else
+        {
+            toggle_Pause.SetActive(false);
         }
     }    
 }
