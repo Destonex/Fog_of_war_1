@@ -41739,7 +41739,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d0f11e793148c6478f827846883d2d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NoclipScript: {fileID: 0}
   EmptyNoclip: {fileID: 478720291}
   speed: 1
   fastSpeed: 2
@@ -42783,17 +42782,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1987369531 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2937381546787039937, guid: 6db78db4d8ea6374d99f30121b24473d, type: 3}
-  m_PrefabInstance: {fileID: 1297513163}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1987369527}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41ddfa802cff1c94e9f7b30297105917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1987369536
@@ -53342,7 +53330,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   postProcessVolume: {fileID: 1987369530}
-  weaponScript: {fileID: 1987369531}
+  weaponScript: {fileID: 0}
   k: 0
   fpss: {fileID: 9094845847045916187}
   fps: {fileID: 1907838503}
@@ -54356,6 +54344,10 @@ MonoBehaviour:
   noClipScript: {fileID: 1907838511}
   toggle_Overlay: {fileID: 313478209}
   overlayToggleScript: {fileID: 2096139156}
+  toggle_Godmode: {fileID: 0}
+  godmodeScript: {fileID: 0}
+  toggle_Pause: {fileID: 0}
+  PauseScript: {fileID: 0}
 --- !u!224 &5329136528196092347
 RectTransform:
   m_ObjectHideFlags: 0
