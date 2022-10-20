@@ -89,17 +89,6 @@ public class Button_Canvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            if(Input.GetKeyDown("r")){
-        if(coordinates.activeSelf == true){
-                coordinates.SetActive(false);
-            }
-            else{
-                coordinates.SetActive(true);
-                
-            }
-        }
-
-
         if (Input.GetKeyDown("`") && canvas == true) {
             fon.SetActive(true);
             Time.timeScale = 0;
