@@ -2,26 +2,50 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class menu_scripts : MonoBehaviour
 {
    public GameObject exitPanel;
    public GameObject settingPanel;
-   public GameObject CollecthionPanel;
+   public GameObject loadPanel;
    public GameObject Button;
+   private string selected;
+   
+   public RawImage map_foto;
+
+   public Texture Forest_foto;
+   public Texture Village_foto;
+   public Texture Polotsk_foto; 
    //public GameObject Text;
 
-   public void Update() {
-    Cursor.visible = true;
-    Cursor.lockState = CursorLockMode.None;
+    public void Update() {
+      Cursor.visible = true;
+      Cursor.lockState = CursorLockMode.None;
     }
-   public void StartGame(){
-        SceneManager.LoadScene("Forest");
-  }
+    public void StartGame(){
+      SceneManager.LoadScene("Forest");
+    }
 
-   public void LoadGame(){
-        SceneManager.LoadScene("Villege");
-  }
+    public void LoadGame(){
+      SceneManager.LoadScene(selected);
+    }
+
+    public void ForestSelected(){
+      selected = "Forest";
+      map_foto.GetComponent<RawImage>().texture = Forest_foto; 
+    }
+
+    public void VillageSelected(){
+      selected = "Village";
+      map_foto.GetComponent<RawImage>().texture  = Village_foto; 
+    }
+
+    public void PolotskSelected(){
+      selected = "Polotsk_A1";
+      map_foto.GetComponent<RawImage>().texture = Polotsk_foto; 
+    }
+
     public void ExitGame(){
       Application.Quit();  
     }
@@ -48,17 +72,17 @@ public class menu_scripts : MonoBehaviour
       Button.SetActive(true);
     }
 
-    public void CollecthionPanel_true(){
-      //CollecthionPanel.SetActive(true);  
-      //Button.SetActive(false);
-      SceneManager.LoadScene("Collection");
-
-      //Text.SetActive(false);
+    public void LoadPanel_true(){
+      loadPanel.SetActive(true);  
+      Button.SetActive(false);
     }
 
-    public void CollecthionPanel_false(){
-      CollecthionPanel.SetActive(false);  
+    public void LoadPanel_false(){
+      loadPanel.SetActive(false);  
       Button.SetActive(true);
-      //Text.SetActive(true);
+    }
+
+    public void CollecthionScene(){
+      SceneManager.LoadScene("Collection");
     }
 }
