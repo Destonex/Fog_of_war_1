@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SelectionObject : MonoBehaviour
 {
@@ -23,6 +24,9 @@ public class SelectionObject : MonoBehaviour
         t_Cube.SetActive(true);
     }
 
+    public void f_Exit_Menu(){
+      SceneManager.LoadScene("Menu3d");
+    }
    /* void Start()
     {
         

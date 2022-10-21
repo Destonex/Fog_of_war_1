@@ -49,8 +49,10 @@ public class menu_scripts : MonoBehaviour
     }
 
     public void CollecthionPanel_true(){
-      CollecthionPanel.SetActive(true);  
-      Button.SetActive(false);
+      //CollecthionPanel.SetActive(true);  
+      //Button.SetActive(false);
+      SceneManager.LoadScene("Collection");
+
       //Text.SetActive(false);
     }
 

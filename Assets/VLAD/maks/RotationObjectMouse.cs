@@ -19,6 +19,6 @@ public class RotationObjectMouse : MonoBehaviour
    
     void Update()
     {
-       transform.Rotate(0, 0.3f, 0);
+       transform.Rotate(0, 0.1f, 0);
     }
 }

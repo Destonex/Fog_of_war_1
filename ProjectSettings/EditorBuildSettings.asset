@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Polotsk_A1.unity
     guid: fa02a87f45ec28e4cb400e5445710067
+  - enabled: 1
+    path: Assets/Scenes/Collection.unity
+    guid: 0ae2fa8b35f7ceb47aec0d02a3e58933
   m_configObjects: {}
