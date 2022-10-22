@@ -89,7 +89,7 @@ public class Button_Canvas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("`") && canvas == true) {
+        if (Input.GetKeyDown("q") && canvas == true) {
             fon.SetActive(true);
             Time.timeScale = 0;
             t=true;
@@ -101,7 +101,7 @@ public class Button_Canvas : MonoBehaviour
             //fps.SetActive(false);
             //post_process.SetActive(true);
         }
-        else if(Input.GetKeyDown("`") && canvas == false){
+        else if(Input.GetKeyDown("q") && canvas == false){
             fon.SetActive(false);
                     Time.timeScale = 1;
                 t=false;

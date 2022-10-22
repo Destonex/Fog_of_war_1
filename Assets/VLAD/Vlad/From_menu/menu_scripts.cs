@@ -17,7 +17,13 @@ public class menu_scripts : MonoBehaviour
    public Texture Forest_foto;
    public Texture Village_foto;
    public Texture Polotsk_foto; 
-   //public GameObject Text;
+   public Text nameScene;
+
+    public void Start(){
+      selected = "Forest";
+      // map_foto.GetComponent<RawImage>().texture = Forest_foto;
+      // nameScene.GetComponent<Text>().text = "Лес"; 
+    }
 
     public void Update() {
       Cursor.visible = true;
@@ -33,17 +39,20 @@ public class menu_scripts : MonoBehaviour
 
     public void ForestSelected(){
       selected = "Forest";
-      map_foto.GetComponent<RawImage>().texture = Forest_foto; 
+      map_foto.GetComponent<RawImage>().texture = Forest_foto;
+      nameScene.GetComponent<Text>().text = "Лес"; 
     }
 
     public void VillageSelected(){
       selected = "Village";
       map_foto.GetComponent<RawImage>().texture  = Village_foto; 
+      nameScene.GetComponent<Text>().text = "Деревня"; 
     }
 
     public void PolotskSelected(){
       selected = "Polotsk_A1";
       map_foto.GetComponent<RawImage>().texture = Polotsk_foto; 
+      nameScene.GetComponent<Text>().text = "Полоцк"; 
     }
 
     public void ExitGame(){

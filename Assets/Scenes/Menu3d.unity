@@ -1875,6 +1875,7 @@ MonoBehaviour:
   Forest_foto: {fileID: 2800000, guid: 891c38b823aab3949b4609772978f8f5, type: 3}
   Village_foto: {fileID: 2800000, guid: eb4bc6e7d81ea704da15539f21feb774, type: 3}
   Polotsk_foto: {fileID: 2800000, guid: f2036e61488170545a5367314d6fbe62, type: 3}
+  nameScene: {fileID: 959155628}
 --- !u!1001 &178287760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2299,7 +2300,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 0}
+  m_Texture: {fileID: 2800000, guid: 891c38b823aab3949b4609772978f8f5, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -6564,9 +6565,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '[Desc]
-
-'
+  m_Text: "\u041B\u0435\u0441"
 --- !u!222 &959155629
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12157,6 +12156,7 @@ MonoBehaviour:
   Forest_foto: {fileID: 0}
   Village_foto: {fileID: 0}
   Polotsk_foto: {fileID: 0}
+  nameScene: {fileID: 0}
 --- !u!1001 &1989491226
 PrefabInstance:
   m_ObjectHideFlags: 0
