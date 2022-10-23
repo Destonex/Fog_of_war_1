@@ -17,12 +17,15 @@ public class menu_scripts : MonoBehaviour
    public Texture Forest_foto;
    public Texture Village_foto;
    public Texture Polotsk_foto; 
-   public Text nameScene;
+   public Text Description;
+   public string ForestDescription;
+   public string VillageDescription;
+   public string PolotskDescription;
 
     public void Start(){
       selected = "Forest";
       // map_foto.GetComponent<RawImage>().texture = Forest_foto;
-      // nameScene.GetComponent<Text>().text = "Лес"; 
+       Description.GetComponent<Text>().text = ForestDescription; 
     }
 
     public void Update() {
@@ -40,19 +43,19 @@ public class menu_scripts : MonoBehaviour
     public void ForestSelected(){
       selected = "Forest";
       map_foto.GetComponent<RawImage>().texture = Forest_foto;
-      nameScene.GetComponent<Text>().text = "Лес"; 
+      Description.GetComponent<Text>().text = ForestDescription; 
     }
 
     public void VillageSelected(){
       selected = "Village";
       map_foto.GetComponent<RawImage>().texture  = Village_foto; 
-      nameScene.GetComponent<Text>().text = "Деревня"; 
+      Description.GetComponent<Text>().text = VillageDescription; 
     }
 
     public void PolotskSelected(){
       selected = "Polotsk_A1";
       map_foto.GetComponent<RawImage>().texture = Polotsk_foto; 
-      nameScene.GetComponent<Text>().text = "Полоцк"; 
+      Description.GetComponent<Text>().text = PolotskDescription; 
     }
 
     public void ExitGame(){
