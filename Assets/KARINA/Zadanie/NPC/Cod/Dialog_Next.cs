@@ -46,7 +46,7 @@ public class Dialog_Next : MonoBehaviour
 				Press1.SetActive(true);
 				Press2.SetActive(true);
 				Name.SetActive(true);
-				npc_tallkScript.move.GetComponent<FirstPersonController>().enabled = true;
+				//npc_tallkScript.move.GetComponent<FirstPersonController>().enabled = true;
 				//npc_tallkScript.move.GetComponent<Rigidbody>().;
 				npc_tallkScript.gameObject.GetComponent<Animator>().SetBool("Talking", false);
 			}

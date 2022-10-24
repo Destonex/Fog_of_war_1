@@ -55,7 +55,7 @@ public class NPC_Task : MonoBehaviour
             if (col.tag == "Player" && Input.GetKeyDown("e"))
             {
                 gameObject.GetComponent<Animator>().SetBool("Talking", true);
-                move.GetComponent<FirstPersonController>().enabled = false;
+                //move.GetComponent<FirstPersonController>().enabled = false;
                 //move.GetComponent<Rigidbody>().useGravity = false;
                 if (quest.Quest1 == false)
                 {
