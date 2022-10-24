@@ -34,7 +34,7 @@ public class Dialog_Final : MonoBehaviour
 			Name.SetActive(true);
 			npc_tallkScript.EndDialog = true;
 			npc_tallkScript.Dialog2.SetActive(false);
-			npc_tallkScript.move.GetComponent<FirstPersonController>().enabled = true;
+			//npc_tallkScript.move.GetComponent<FirstPersonController>().enabled = true;
 			//npc_tallkScript.move.GetComponent<Rigidbody>().useGravity = true;
 			npc_tallkScript.gameObject.GetComponent<Animator>().SetBool("Talking", false);
 		}
