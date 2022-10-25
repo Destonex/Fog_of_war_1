@@ -8,8 +8,8 @@ using Unity.Rendering;
 
 public class CascadedShadows : MonoBehaviour
 {
-    public DrawCameraMode k;
-    public Button CascadedShadow;
+    //public DrawCameraMode k;
+   /* public Button CascadedShadow;
 
     public GameObject EmptyShadowCascades;
 
@@ -42,5 +42,5 @@ public class CascadedShadows : MonoBehaviour
         }
 
 
-    }
+    }*/
 }
