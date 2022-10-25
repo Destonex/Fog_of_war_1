@@ -14,7 +14,7 @@ public class Button_Canvas : MonoBehaviour
 {
     public PostProcessVolume postProcessVolume; 
     public NewShooting weaponScript;
-    public DrawCameraMode k; 
+   // public DrawCameraMode k; 
     public GameObject fpss;
     public GameObject fps;
     public GameObject camera;
