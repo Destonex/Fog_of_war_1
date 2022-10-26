@@ -38,7 +38,7 @@ public class NPC_Task : MonoBehaviour
         if (end_Finish == true) 
         {
             quest.Quest1 = false;
-            PressStart.SetActive(false);
+            //f_PressStart_Off();
         }
     }
 
@@ -74,4 +74,5 @@ public class NPC_Task : MonoBehaviour
     {
         PressStart.SetActive(false);
     }
+
 }
