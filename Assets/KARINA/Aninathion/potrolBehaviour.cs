@@ -13,9 +13,6 @@ public class potrolBehaviour : StateMachineBehaviour
     List<Transform> points = new List<Transform>();
     NavMeshAgent agent;
 
-    Transform player;
-    float runRange = 50;
-
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -26,8 +23,6 @@ public class potrolBehaviour : StateMachineBehaviour
 
         agent = animator.GetComponent<NavMeshAgent>();
         agent.SetDestination(points[0].position);
-
-            player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
  
@@ -39,12 +34,6 @@ public class potrolBehaviour : StateMachineBehaviour
        timer += Time.deltaTime;
        if (timer > 30)
         animator.SetBool("isPotroling", false);
-
-        if(SceneManager.GetActiveScene().name != "Menu3d"){
-            float distance = Vector3.Distance(animator.transform.position, player.position);
-            if (distance < runRange)
-                animator.SetBool("isRun", true);
-        }
     }
 
 
