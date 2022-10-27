@@ -25,7 +25,12 @@ public class NewShooting : MonoBehaviour
     private int n;
     private GameObject impact;
 
-    void Update()
+    private RegistrationHits registrationHits;
+    public int t1 = 0;
+    public int t2 = 0;
+    public int t3 = 0;
+
+ void Update()
     {
         Ammo.text = colAmmo.ToString();
         Anim();
@@ -93,7 +98,7 @@ void Anim(){
 
         if(Physics.Raycast(_cam.transform.position, _cam.transform.forward, out hit, range))
         {
-                if(hit.transform.gameObject.tag == "Wood")
+              if(hit.transform.gameObject.tag == "Wood")
                     impact = Instantiate(hitEffect[0], hit.point, Quaternion.LookRotation(hit.normal));
                 else if(hit.transform.gameObject.tag == "Stone")
                     impact = Instantiate(hitEffect[1], hit.point, Quaternion.LookRotation(hit.normal));
@@ -103,6 +108,18 @@ void Anim(){
                     impact = Instantiate(hitEffect[3], hit.point, Quaternion.LookRotation(hit.normal));
                 else if(hit.transform.gameObject.tag == "AI")
                     impact = Instantiate(hitEffect[4], hit.point, Quaternion.LookRotation(hit.normal));
+                else if (hit.transform.gameObject.tag == "Target1"){
+                    t1++;
+                    impact = Instantiate(hitEffect[0], hit.point, Quaternion.LookRotation(hit.normal));
+                }
+                else if(hit.transform.gameObject.tag == "Target2"){
+                    t2++;
+                    impact = Instantiate(hitEffect[0], hit.point, Quaternion.LookRotation(hit.normal));
+                }
+                else if(hit.transform.gameObject.tag == "Target3"){
+                    t3++;
+                    impact = Instantiate(hitEffect[1], hit.point, Quaternion.LookRotation(hit.normal));
+                }
                 else
                     impact = Instantiate(hitEffect[1], hit.point, Quaternion.LookRotation(hit.normal));
             Destroy(impact, 2f);
@@ -112,6 +129,8 @@ void Anim(){
                 hit.rigidbody.AddForce(-hit.normal * force);
             }
         
+            
+            
         }
     }
 
