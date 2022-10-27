@@ -25,6 +25,11 @@ public class NewShooting : MonoBehaviour
     private int n;
     private GameObject impact;
 
+    private RegistrationHits registrationHits;
+    public int t1 = 0;
+    public int t2 = 0;
+    public int t3 = 0;
+
  void Update()
     {
         Ammo.text = colAmmo.ToString();
@@ -112,6 +117,22 @@ void Anim(){
                 hit.rigidbody.AddForce(-hit.normal * force);
             }
         
+            if(hit.transform.gameObject.tag == "Target1"){
+                t1++;
+                impact = Instantiate(hitEffect[1], hit.point, Quaternion.LookRotation(hit.normal));//hitEffect[0]
+                Destroy(impact, 2f);
+            }
+            
+            if(hit.transform.gameObject.tag == "Target2"){
+                registrationHits.t2++;
+                impact = Instantiate(hitEffect[1], hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(impact, 2f);
+            }
+            if(hit.transform.gameObject.tag == "Target3"){
+                registrationHits.t3++;
+                impact = Instantiate(hitEffect[1], hit.point, Quaternion.LookRotation(hit.normal));
+                Destroy(impact, 2f);
+            }
         }
     }
 

@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Points
+  - AI
+  - Button
+  - Target1
+  - Target2
+  - Target3
+  - Wood
   layers:
   - Default
   - TransparentFX

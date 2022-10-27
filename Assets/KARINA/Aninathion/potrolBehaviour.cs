@@ -12,7 +12,7 @@ public class potrolBehaviour : StateMachineBehaviour
     float timer;
     List<Transform> points = new List<Transform>();
     NavMeshAgent agent;
-
+    int i = 0;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -22,18 +22,30 @@ public class potrolBehaviour : StateMachineBehaviour
             points.Add(t);
 
         agent = animator.GetComponent<NavMeshAgent>();
-        agent.SetDestination(points[0].position);
+        agent.SetDestination(points[i].position);
     }
 
  
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-       if (agent.remainingDistance <= agent.stoppingDistance)
-            agent.SetDestination(points[Random.Range(0, points.Count)].position);
+         
+        if(i == points.Count)
+            i = 0;
 
-       timer += Time.deltaTime;
-       if (timer > 30)
-        animator.SetBool("isPotroling", false);
+        if (agent.remainingDistance <= agent.stoppingDistance){                   
+            agent.SetDestination(points[i++].position);
+        }
+            // if(i++ == points.Count)
+            //     i=0;
+
+    //    i++;
+    //     if(i == points.Count)
+    //                 i = 0;
+
+    //    timer += Time.deltaTime;
+    //    if (timer > 30){
+    //     animator.SetBool("isPotroling", false);      
+    //     }
     }
 
 
