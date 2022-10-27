@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.Characters.FirstPerson;
+using UnityEngine.SceneManagement;
 
 public class Dialog_Final : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class Dialog_Final : MonoBehaviour
 	public GameObject Text1;
 	public GameObject Name;
 	public GameObject Press1;
+	public GameObject Press2;
 
 	private bool isText1 = true;
 	public NPC_Task npc_tallkScript;
@@ -19,6 +21,7 @@ public class Dialog_Final : MonoBehaviour
     {
 		Text1.SetActive(true);
 		Press1.SetActive(true);
+		Press2.SetActive(true);
 		Name.SetActive(true);
 	}
 
@@ -31,6 +34,8 @@ public class Dialog_Final : MonoBehaviour
 
 			Text1.SetActive(true);
 			Press1.SetActive(true);
+			Press2.SetActive(true);
+
 			Name.SetActive(true);
 			npc_tallkScript.EndDialog = true;
 			npc_tallkScript.Dialog2.SetActive(false);
@@ -38,7 +43,10 @@ public class Dialog_Final : MonoBehaviour
 			//npc_tallkScript.move.GetComponent<Rigidbody>().useGravity = true;
 			npc_tallkScript.gameObject.GetComponent<Animator>().SetBool("Talking", false);
 		}
-
+		if (Input.GetKey("f"))
+		{
+      		SceneManager.LoadScene("Loading");
+		}
 		//if (isText1 == true)
 		//{
 		//	Text1.SetActive(true);

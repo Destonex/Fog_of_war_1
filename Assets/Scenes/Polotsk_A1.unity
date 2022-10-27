@@ -2768,6 +2768,7 @@ MonoBehaviour:
   Text1: {fileID: 110188580}
   Name: {fileID: 1761641701}
   Press1: {fileID: 1010571897}
+  Press2: {fileID: 0}
   npc_tallkScript: {fileID: 399905323}
 --- !u!1 &255827004
 GameObject:
@@ -5974,6 +5975,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Qevent: {fileID: 1340778014}
+  mosin: {fileID: 2128092585}
+  PressStart: {fileID: 251807078}
 --- !u!65 &584045680
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10334,6 +10337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ca34a6148db2d54493f84f379293f33, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GroupID: 0
 --- !u!4 &1021627852
 Transform:
   m_ObjectHideFlags: 0
@@ -18296,7 +18300,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   postProcessVolume: {fileID: 1151139552}
   weaponScript: {fileID: 2128092589}
-  k: 0
   fpss: {fileID: 2115555714}
   fps: {fileID: 1018708050}
   camera: {fileID: 658405831}

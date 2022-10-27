@@ -28,19 +28,13 @@ public class potrolBehaviour : StateMachineBehaviour
  
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-         
         if(i == points.Count)
             i = 0;
 
         if (agent.remainingDistance <= agent.stoppingDistance){                   
             agent.SetDestination(points[i++].position);
         }
-            // if(i++ == points.Count)
-            //     i=0;
 
-    //    i++;
-    //     if(i == points.Count)
-    //                 i = 0;
 
     //    timer += Time.deltaTime;
     //    if (timer > 30){

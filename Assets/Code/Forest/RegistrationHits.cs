@@ -9,11 +9,11 @@ public class RegistrationHits : MonoBehaviour
     public GameObject target2;
     public GameObject target3;
     public GameObject mosin;
-    public  int t1 = 0;
-    public int t2 = 0;
-    public int t3 = 0;
+    public  int tt1 = 0;
+    public int tt2 = 0;
+    public int tt3 = 0;
     private ObgectQuest obgectQuest;
-    private NewShooting newShooting;
+    public NewShooting newShooting;
 
     // Start is called before the first frame update
     void Start()
@@ -26,9 +26,9 @@ public class RegistrationHits : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //t1 = newShooting.t1; 
-        //t2 = newShooting.t2;
-       // t3 = newShooting.t3; 
+        tt1 = newShooting.t1; 
+        tt2 = newShooting.t2;
+        tt3 = newShooting.t3; 
 
        if(mosin.activeSelf == true){
         target1.SetActive(true);
@@ -43,19 +43,19 @@ public class RegistrationHits : MonoBehaviour
 
     public void f_HitTarget1()
     {
-        if(t1<4)
-            target1.GetComponent<Text>().text = "первая мешень "+t1+"/3";
+        if(tt1<4)
+            target1.GetComponent<Text>().text = "первая мешень "+tt1+"/3";
     }
     
     public void f_HitTarget2()
     {
-        if(t2<4)
-            target2.GetComponent<Text>().text = "вторая мешень "+t2+"/3";
+        if(tt2<4)
+            target2.GetComponent<Text>().text = "вторая мешень "+tt2+"/3";
     }
     
     public void f_HitTarget3()
     {
-        if(t3<4)
-            target3.GetComponent<Text>().text = "третья мешень "+t3+"/3";
+        if(tt3<4)
+            target3.GetComponent<Text>().text = "третья мешень "+tt3+"/3";
     }
 }
