@@ -44,18 +44,18 @@ public class RegistrationHits : MonoBehaviour
     public void f_HitTarget1()
     {
         if(tt1<4)
-            target1.GetComponent<Text>().text = "первая мешень "+tt1+"/3";
+            target1.GetComponent<Text>().text = "Первая мишень "+tt1+"/3";
     }
     
     public void f_HitTarget2()
     {
         if(tt2<4)
-            target2.GetComponent<Text>().text = "вторая мешень "+tt2+"/3";
+            target2.GetComponent<Text>().text = "Вторая мишень "+tt2+"/3";
     }
     
     public void f_HitTarget3()
     {
         if(tt3<4)
-            target3.GetComponent<Text>().text = "третья мешень "+tt3+"/3";
+            target3.GetComponent<Text>().text = "Третья мишень "+tt3+"/3";
     }
 }

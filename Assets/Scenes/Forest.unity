@@ -6715,7 +6715,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0442\u0440\u0435\u0442\u044C\u044F \u043C\u0435\u0448\u0435\u043D\u044C
+  m_Text: "\u0422\u0440\u0435\u0442\u044C\u044F \u043C\u0438\u0448\u0435\u043D\u044C
     0/3"
 --- !u!222 &427801338
 CanvasRenderer:
@@ -14581,7 +14581,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 100
-  m_StoppingDistance: 0
+  m_StoppingDistance: 0.5
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -16321,7 +16321,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233272156}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1448, y: -74, z: 443}
+  m_LocalPosition: {x: 1569, y: -74, z: 321}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 1303056554}
@@ -18582,7 +18582,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u043F\u0435\u0440\u0432\u0430\u044F \u043C\u0435\u0448\u0435\u043D\u044C
+  m_Text: "\u041F\u0435\u0440\u0432\u0430\u044F \u043C\u0438\u0448\u0435\u043D\u044C 
     0/3"
 --- !u!222 &1499982569
 CanvasRenderer:
@@ -18632,7 +18632,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506485250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2536, y: -301, z: 2518}
+  m_LocalPosition: {x: 873, y: -301, z: 2786}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 1303056554}
@@ -24586,7 +24586,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u0432\u0442\u043E\u0440\u0430\u044F \u043C\u0435\u0448\u0435\u043D\u044C
+  m_Text: "\u0412\u0442\u043E\u0440\u0430\u044F \u043C\u0438\u0448\u0435\u043D\u044C
     0/3"
 --- !u!222 &1926219676
 CanvasRenderer:
@@ -25196,7 +25196,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981207864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5727, y: -260, z: 2760}
+  m_LocalPosition: {x: -998, y: 138, z: 698}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 1303056554}
@@ -29211,6 +29211,7 @@ GameObject:
   - component: {fileID: 5866666020383842067}
   - component: {fileID: 1104427048}
   - component: {fileID: 1104427047}
+  - component: {fileID: 919132148535451604}
   m_Layer: 0
   m_Name: Nikita
   m_TagString: Untagged
@@ -29218,6 +29219,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &919132148535451604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148535451603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 004be2b8dc27b684ea6fb11b2ca332c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: []
+  agent: {fileID: 1104427047}
+  agentTransform: {fileID: 0}
+  Target: {fileID: 0}
 --- !u!4 &922685988848744009
 Transform:
   m_ObjectHideFlags: 0
@@ -33180,6 +33197,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58c185f92e6c25f4aaabc710197c7680, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  timer: 0
+  pointIndex: 0
   points:
   - {fileID: 0}
   - {fileID: 0}
@@ -33192,6 +33211,7 @@ MonoBehaviour:
   agent: {fileID: 2249145803549545102}
   agentTransform: {fileID: 0}
   Target: {fileID: 0}
+  rotationSpeed: 0
 --- !u!95 &2249145803549545101
 Animator:
   serializedVersion: 3

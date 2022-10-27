@@ -5,7 +5,6 @@ using UnityEngine.AI;
 
 public class Patrol : MonoBehaviour
 {
-    float timer;
     int pointIndex = 0;
     public List<Transform> points = new List<Transform>();
     public NavMeshAgent agent;
@@ -16,13 +15,12 @@ public class Patrol : MonoBehaviour
     private float rotationSpeed;
     void Start()
     {
-       timer = 0;
        Transform pointObject = GameObject.FindGameObjectWithTag("Points").transform;
         foreach (Transform item in pointObject)
             points.Add(item);
         Target = points[1];
           
-            gameObject.GetComponent<Animator>().SetBool("Walk", true);
+            gameObject.GetComponent<Animator>().SetBool("isPotroling", true);
     
         rotationSpeed = agent.angularSpeed;
         agentTransform = agent.transform;
@@ -30,7 +28,6 @@ public class Patrol : MonoBehaviour
         agent.SetDestination(points[0].position);
     }
 
-    //OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     void Update()
     {
         RotateToTarget();
@@ -40,12 +37,9 @@ public class Patrol : MonoBehaviour
             //gameObject.GetComponent<Animator>().SetBool("Walk", true);
             
        }
-
-        timer += Time.deltaTime;    
+ 
         if(pointIndex == points.Count)
             pointIndex = 0;
-        //if(timer > 10)
-            //animator.SetBool("IsPatrolling", false);
     }
 
     private void RotateToTarget() // поворачивает в стороно цели со скоростью rotationSpeed
@@ -61,22 +55,4 @@ public class Patrol : MonoBehaviour
             );
         
     }
-
-    //OnStateExit is called when a transition ends and the state machine finishes evaluating this state
-   /* override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    {
-       agent.SetDestination(agent.transform.position);
-    }//*/
-
-    // OnStateMove is called right after Animator.OnAnimatorMove()
-    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that processes and affects root motion
-    //}
-
-    // OnStateIK is called right after Animator.OnAnimatorIK()
-    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
-    //{
-    //    // Implement code that sets up animation IK (inverse kinematics)
-    //}
 }
