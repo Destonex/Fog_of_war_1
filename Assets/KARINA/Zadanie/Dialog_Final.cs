@@ -14,7 +14,7 @@ public class Dialog_Final : MonoBehaviour
 
 	private bool isText1 = true;
 	public NPC_Task npc_tallkScript;
-
+    private loading_scene_slider loadingSceneSlider;
 
 	// Start is called before the first frame update
 	void Start()
@@ -46,6 +46,7 @@ public class Dialog_Final : MonoBehaviour
 		if (Input.GetKey("f"))
 		{
       		SceneManager.LoadScene("Loading");
+      		loading_scene_slider.sceneID = 3;
 		}
 		//if (isText1 == true)
 		//{
