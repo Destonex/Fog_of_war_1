@@ -10,7 +10,7 @@ public class menu_scripts : MonoBehaviour
    public GameObject settingPanel;
    public GameObject loadPanel;
    public GameObject Button;
-   private string selected;
+   private int selected;
    
    public RawImage map_foto;
 
@@ -21,9 +21,10 @@ public class menu_scripts : MonoBehaviour
    public string ForestDescription;
    public string VillageDescription;
    public string PolotskDescription;
+   public loading_scene_slider loadingSceneSlider;
 
     public void Start(){
-      selected = "Forest";
+      selected = 1;
       // map_foto.GetComponent<RawImage>().texture = Forest_foto;
        Description.GetComponent<Text>().text = ForestDescription; 
     }
@@ -37,23 +38,24 @@ public class menu_scripts : MonoBehaviour
     }
 
     public void LoadGame(){
-      SceneManager.LoadScene(selected);
+      SceneManager.LoadScene("Loading");
+      loading_scene_slider.sceneID = selected;
     }
 
     public void ForestSelected(){
-      selected = "Forest";
+      selected = 1;
       map_foto.GetComponent<RawImage>().texture = Forest_foto;
       Description.GetComponent<Text>().text = ForestDescription; 
     }
 
     public void VillageSelected(){
-      selected = "Village";
+      selected = 2;
       map_foto.GetComponent<RawImage>().texture  = Village_foto; 
       Description.GetComponent<Text>().text = VillageDescription; 
     }
 
     public void PolotskSelected(){
-      selected = "Polotsk_A1";
+      selected = 3;
       map_foto.GetComponent<RawImage>().texture = Polotsk_foto; 
       Description.GetComponent<Text>().text = PolotskDescription; 
     }

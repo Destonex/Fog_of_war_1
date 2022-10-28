@@ -14,13 +14,14 @@ public class RegistrationHits : MonoBehaviour
     public int tt3 = 0;
     private ObgectQuest obgectQuest;
     public NewShooting newShooting;
-
+    public GameObject Ammo;
     // Start is called before the first frame update
     void Start()
     {
         target1.SetActive(false);
         target2.SetActive(false);
         target3.SetActive(false);
+        Ammo.SetActive(false);
     }
 
     // Update is called once per frame
@@ -34,6 +35,7 @@ public class RegistrationHits : MonoBehaviour
         target1.SetActive(true);
         target2.SetActive(true);
         target3.SetActive(true);
+        Ammo.SetActive(true);
        }
 
        f_HitTarget1();
@@ -44,18 +46,18 @@ public class RegistrationHits : MonoBehaviour
     public void f_HitTarget1()
     {
         if(tt1<4)
-            target1.GetComponent<Text>().text = "первая мешень "+tt1+"/3";
+            target1.GetComponent<Text>().text = "Первая мишень "+tt1+"/3";
     }
     
     public void f_HitTarget2()
     {
         if(tt2<4)
-            target2.GetComponent<Text>().text = "вторая мешень "+tt2+"/3";
+            target2.GetComponent<Text>().text = "Вторая мишень "+tt2+"/3";
     }
     
     public void f_HitTarget3()
     {
         if(tt3<4)
-            target3.GetComponent<Text>().text = "третья мешень "+tt3+"/3";
+            target3.GetComponent<Text>().text = "Третья мишень "+tt3+"/3";
     }
 }
