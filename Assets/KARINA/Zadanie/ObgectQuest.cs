@@ -8,6 +8,7 @@ public class ObgectQuest : MonoBehaviour
     public GameObject mosin;
     private Dialog_Next Text1;
     public GameObject PressStart;
+    public GameObject map;
     // Start is called before the first frame update
     void Start()
     {
@@ -37,7 +38,9 @@ public class ObgectQuest : MonoBehaviour
                 PressStart.SetActive(false);
                 Qevent.end_Quest1 = true;
                 mosin.SetActive(true);
-                Destroy(gameObject);
+                //Destroy(gameObject);
+                gameObject.SetActive(false);
+                map.SetActive(false);
             }
         }
     }
