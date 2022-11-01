@@ -488,15 +488,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a3eb5ad6562acd43b5026e9ea39e17f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a3eb5ad6562acd43b5026e9ea39e17f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a3eb5ad6562acd43b5026e9ea39e17f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9a3eb5ad6562acd43b5026e9ea39e17f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1869,6 +1869,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 27927cbde3c9dfe4c9eccb045ebefa1d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 94f7f9020bdeb434a8d0d96bbb7ff826, type: 2}
     - target: {fileID: 919132149155446097, guid: 27927cbde3c9dfe4c9eccb045ebefa1d, type: 3}
       propertyPath: m_Name
       value: NikolaevChurchCompleted (1)
