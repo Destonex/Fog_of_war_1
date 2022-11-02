@@ -1468,6 +1468,11 @@ RectTransform:
   m_AnchoredPosition: {x: -5.0000076, y: 0}
   m_SizeDelta: {x: -20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &165651237 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 04d3c67549f9cfa4cb22bc4cbad7618a, type: 3}
+  m_PrefabInstance: {fileID: 552387688}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &184534772
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5219,6 +5224,7 @@ MonoBehaviour:
   Qevent: {fileID: 3185390762106024290}
   mosin: {fileID: 275657468}
   PressStart: {fileID: 727993163637946933}
+  map: {fileID: 165651237}
 --- !u!65 &584045680
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6146,6 +6152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   qustion: {fileID: 838971647}
   krug: {fileID: 1309914898}
+  Maptr: {fileID: 1064542793}
 --- !u!65 &684501189
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -40371,6 +40378,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   qustion: {fileID: 633142503}
   krug: {fileID: 1053097675}
+  Maptr: {fileID: 1064542793}
 --- !u!65 &1316849688
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -42860,6 +42868,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   qustion: {fileID: 1924424478}
   krug: {fileID: 1110570938}
+  Maptr: {fileID: 1064542793}
 --- !u!65 &1531105280
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -46113,8 +46122,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1801871495}
-  - component: {fileID: 1801871497}
   - component: {fileID: 1801871496}
+  - component: {fileID: 1801871497}
   m_Layer: 0
   m_Name: Terrain_0_0_e70cbecc-bb49-4ca3-acb0-46988fbbaced (1)
   m_TagString: Untagged
@@ -46145,7 +46154,7 @@ TerrainCollider:
   m_GameObject: {fileID: 1801871494}
   m_Material: {fileID: 0}
   m_Enabled: 1
-  m_TerrainData: {fileID: 15600000, guid: 803dceafc3b8d1145bb2137fe42f7234, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: 4998f57d7ce6e2a48a84ce96d39bfd8c, type: 2}
   m_EnableTreeColliders: 1
 --- !u!218 &1801871497
 Terrain:
@@ -46156,7 +46165,7 @@ Terrain:
   m_GameObject: {fileID: 1801871494}
   m_Enabled: 1
   serializedVersion: 6
-  m_TerrainData: {fileID: 15600000, guid: 803dceafc3b8d1145bb2137fe42f7234, type: 2}
+  m_TerrainData: {fileID: 15600000, guid: 4998f57d7ce6e2a48a84ce96d39bfd8c, type: 2}
   m_TreeDistance: 5000
   m_TreeBillboardDistance: 50
   m_TreeCrossFadeLength: 5
@@ -46168,18 +46177,18 @@ Terrain:
   m_HeightmapMaximumLOD: 0
   m_ShadowCastingMode: 2
   m_DrawHeightmap: 1
-  m_DrawInstanced: 1
+  m_DrawInstanced: 0
   m_DrawTreesAndFoliage: 1
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
+  m_MaterialTemplate: {fileID: 0}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
-  m_ScaleInLightmap: 0.8
+  m_ScaleInLightmap: 1
   m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
   m_GroupingID: 0
   m_RenderingLayerMask: 1
-  m_AllowAutoConnect: 1
+  m_AllowAutoConnect: 0
 --- !u!1 &1809190025
 GameObject:
   m_ObjectHideFlags: 0
