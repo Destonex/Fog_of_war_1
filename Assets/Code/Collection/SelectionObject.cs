@@ -5,23 +5,38 @@ using UnityEngine.SceneManagement;
 
 public class SelectionObject : MonoBehaviour
 {
-    public GameObject Dom;
-    public GameObject t_Dom;
-    public GameObject Cube;
-    public GameObject t_Cube;
+    [Header("Николаевский собор")]
+    public GameObject NicholasCathedral;
+    public GameObject TextNicholasCathedral;
 
-    public void f_Dom(){
-        Dom.SetActive(true);
-        t_Dom.SetActive(true);
-        Cube.SetActive(false);
-        t_Cube.SetActive(false);
+    [Header("Трубка связного")]
+    public GameObject Tube;
+    public GameObject TextTube;
+
+    [Header("Дом красной армии")]
+    public GameObject DomKrasnoyArmy;
+    public GameObject TextDomKrasnoyArmy;
+
+    [Header("Здание комендатуры")]
+    public GameObject CommandantsOffice;
+    public GameObject TextCommandantsOffice;
+
+    [Header("Солдатский клуб")]
+    public GameObject soldiersClub;
+    public GameObject TextDom;
+
+    public void f_NicholasCathedral(){
+        NicholasCathedral.SetActive(true);
+        TextNicholasCathedral.SetActive(true);
+        Tube.SetActive(false);
+        TextTube.SetActive(false);
     }
 
-    public void f_Cube(){
-        Dom.SetActive(false);
-        t_Dom.SetActive(false);
-        Cube.SetActive(true);
-        t_Cube.SetActive(true);
+    public void f_Tube(){
+        NicholasCathedral.SetActive(false);
+        TextNicholasCathedral.SetActive(false);
+        Tube.SetActive(true);
+        TextTube.SetActive(true);
     }
 
     public void f_Exit_Menu(){
