@@ -317,7 +317,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2403275545658466902, guid: 0afc5b93ea4ee1f4096b4ca371c1ff53, type: 3}
       propertyPath: m_Name
-      value: Canvas
+      value: Loading
+      objectReference: {fileID: 0}
+    - target: {fileID: 2403275545681150565, guid: 0afc5b93ea4ee1f4096b4ca371c1ff53, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2403275546448402412, guid: 0afc5b93ea4ee1f4096b4ca371c1ff53, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2403275546448402412, guid: 0afc5b93ea4ee1f4096b4ca371c1ff53, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2403275546686875551, guid: 0afc5b93ea4ee1f4096b4ca371c1ff53, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0afc5b93ea4ee1f4096b4ca371c1ff53, type: 3}
@@ -428,5 +444,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d3367b7b2c1043429f81301f235138c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneID: 3
   loadingImg: {fileID: 1344447712}

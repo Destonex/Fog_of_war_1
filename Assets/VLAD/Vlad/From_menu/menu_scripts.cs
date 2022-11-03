@@ -34,7 +34,8 @@ public class menu_scripts : MonoBehaviour
       Cursor.lockState = CursorLockMode.None;
     }
     public void StartGame(){
-      SceneManager.LoadScene("Forest");
+      SceneManager.LoadScene("Loading");
+      loading_scene_slider.sceneID = 1;
     }
 
     public void LoadGame(){

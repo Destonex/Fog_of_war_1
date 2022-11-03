@@ -6,6 +6,7 @@ public class Map : MonoBehaviour
 {
     public GameObject qustion;
     public GameObject krug;
+    public MapOpen Maptr;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,8 +22,9 @@ public class Map : MonoBehaviour
 
     void OnTriggerEnter(Collider col)
     {
-       qustion.SetActive(false);
-        krug.SetActive(true); 
+        if(Maptr.Cube.activeSelf == false){
+            qustion.SetActive(false);
+            krug.SetActive(true); 
+        }
     }
-
 }
