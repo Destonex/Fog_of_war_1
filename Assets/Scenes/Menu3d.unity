@@ -12558,8 +12558,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff067061fca08b34fb389f3f2496391a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dropDown: {fileID: 14430450}
-  dropdown: {fileID: 1118687940}
+  graphics: {fileID: 14430450}
+  resol: {fileID: 1118687940}
   toggle: {fileID: 84696976}
 --- !u!114 &1987151543
 MonoBehaviour:
