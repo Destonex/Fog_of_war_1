@@ -48,4 +48,4 @@ public class potrolBehaviour : StateMachineBehaviour
        agent.SetDestination(agent.transform.position);
     }
 
-}
+}//*/

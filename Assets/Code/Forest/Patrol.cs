@@ -6,12 +6,12 @@ using UnityEngine.AI;
 public class Patrol : MonoBehaviour
 {
     int pointIndex = 0;
-    public List<Transform> points = new List<Transform>();
+    private List<Transform> points = new List<Transform>();
     public NavMeshAgent agent;
 
-    public Transform agentTransform;
-    public Transform Target;
-    
+    private Transform agentTransform;
+    private Transform Target;
+
     private float rotationSpeed;
     void Start()
     {
@@ -19,9 +19,9 @@ public class Patrol : MonoBehaviour
         foreach (Transform item in pointObject)
             points.Add(item);
         Target = points[1];
-          
+
             gameObject.GetComponent<Animator>().SetBool("isPotroling", true);
-    
+
         rotationSpeed = agent.angularSpeed;
         agentTransform = agent.transform;
         //agent = animator.GetComponent<NavMeshAgent>();
@@ -35,7 +35,7 @@ public class Patrol : MonoBehaviour
            Target = points[pointIndex]; 
             agent.SetDestination(points[pointIndex++].position);
             //gameObject.GetComponent<Animator>().SetBool("Walk", true);
-            
+
        }
  
         if(pointIndex == points.Count)
@@ -53,6 +53,5 @@ public class Patrol : MonoBehaviour
                 Quaternion.LookRotation(lookVector , Vector3.up),
                 rotationSpeed * Time.deltaTime
             );
-        
     }
 }
