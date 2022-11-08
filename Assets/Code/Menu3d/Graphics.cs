@@ -6,8 +6,8 @@ using System.Linq;
 
 public class Graphics : MonoBehaviour
 {
-    public Dropdown dropDown;
-    public Dropdown dropdown;
+    public Dropdown graphics;
+    public Dropdown resol;
     public Toggle toggle;
     Resolution[] res;
 
@@ -18,10 +18,10 @@ public class Graphics : MonoBehaviour
 
 
         //Graphics
-        dropDown.ClearOptions();
-       dropDown.AddOptions(QualitySettings.names.ToList());
-        // dropDown.value = QualitySettings.GetQualityLevel(); //Графика как в Unity
-        // dropDown.value = 2;//Графика medium
+        graphics.ClearOptions();
+       graphics.AddOptions(QualitySettings.names.ToList());
+        // dropDown.value = QualitySettings.GetQualityLevel(); //пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅ Unity
+        // dropDown.value = 2;//пїЅпїЅпїЅпїЅпїЅпїЅпїЅ medium
 
         //Resolution
         Resolution[] resolution = Screen.resolutions;
@@ -30,16 +30,16 @@ public class Graphics : MonoBehaviour
 
         for (int i = 0; i < res.Length; i++)
         {
-            // strRes[i] = res[i].width.ToString() + "x" + res[i].height.ToString();//отображение без Ghz
+            // strRes[i] = res[i].width.ToString() + "x" + res[i].height.ToString();//пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ Ghz
              strRes[i] = res[i].ToString();
         }
-        dropdown.ClearOptions();
-        dropdown.AddOptions(strRes.ToList());
+        resol.ClearOptions();
+        resol.AddOptions(strRes.ToList());
         
         if (PlayerPrefs.HasKey("Quality") || PlayerPrefs.HasKey("Resolution") || PlayerPrefs.HasKey("FullScreen"))
         {
-            dropDown.value = PlayerPrefs.GetInt("Quality");
-            dropdown.value = PlayerPrefs.GetInt("Resolution");
+            graphics.value = PlayerPrefs.GetInt("Quality");
+            resol.value = PlayerPrefs.GetInt("Resolution");
 
             QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("Quality"));
             Screen.SetResolution(res[PlayerPrefs.GetInt("Resolution")].width, res[PlayerPrefs.GetInt("Resolution")].height, Screen.fullScreen);
@@ -56,9 +56,9 @@ public class Graphics : MonoBehaviour
         }
         else
         {
-            dropDown.value = QualitySettings.GetQualityLevel();
+            graphics.value = QualitySettings.GetQualityLevel();
            Screen.SetResolution(res[res.Length - 1].width, res[res.Length - 1].height, Screen.fullScreen);
-            dropdown.value = res.Length - 1;
+            resol.value = res.Length - 1;
 
             Screen.fullScreen = true;
             toggle.isOn = !Screen.fullScreen;
@@ -66,14 +66,14 @@ public class Graphics : MonoBehaviour
     }
 
     public void SetQuality(){
-        QualitySettings.SetQualityLevel(dropDown.value);
-        PlayerPrefs.SetInt("Quality", dropDown.value);
+        QualitySettings.SetQualityLevel(graphics.value);
+        PlayerPrefs.SetInt("Quality", graphics.value);
     }
 
     public void SetRes()
     {
-        Screen.SetResolution(res[dropdown.value].width, res[dropdown.value].height, Screen.fullScreen);
-        PlayerPrefs.SetInt("Resolution", dropdown.value);
+        Screen.SetResolution(res[resol.value].width, res[resol.value].height, Screen.fullScreen);
+        PlayerPrefs.SetInt("Resolution", resol.value);
     }
  
     public void ScreenMode()

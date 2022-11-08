@@ -5245,7 +5245,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584045677}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -52708,14 +52708,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41ddfa802cff1c94e9f7b30297105917, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sniper: {fileID: 0}
-  knife: {fileID: 0}
-  grenade: {fileID: 0}
-  shootPoint: {fileID: 0}
-  targetLook: {fileID: 0}
-  cameraMain: {fileID: 3300810652718467208}
-  decal: {fileID: 0}
-  bullet: {fileID: 2019967818430389403, guid: aef84950d1319a343b6b03851f65f68e, type: 3}
 --- !u!4 &1445298193701546341
 Transform:
   m_ObjectHideFlags: 0

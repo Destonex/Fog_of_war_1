@@ -9,6 +9,7 @@ public class NewShooting : MonoBehaviour
 
     public float damage = 21f;
     public float fireRate = 1f;
+    public float force = 155f;
     public float range = 15f;
     public ParticleSystem muzzleFlash;
     public Transform bulletSpawn;
