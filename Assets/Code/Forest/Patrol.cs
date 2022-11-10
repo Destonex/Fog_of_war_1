@@ -41,12 +41,21 @@ public class Patrol : MonoBehaviour
         if(pointIndex == points.Count)
             pointIndex = 0;
     }
-
+    
     private void RotateToTarget() // поворачивает в стороно цели со скоростью rotationSpeed
     {
+
         Vector3 lookVector = Target.position - agentTransform.position;
+
+        float g = agentTransform.rotation.y + lookVector.y;
+        if (g >= agentTransform.rotation.y + 30)
+            gameObject.GetComponent<Animator>().SetBool("isL", true);
+
         lookVector.y = 0;
         if (lookVector == Vector3.zero) return;
+
+     
+
         agentTransform.rotation = Quaternion.RotateTowards
             (
                 agentTransform.rotation,
