@@ -14,7 +14,7 @@ public class Patrol : MonoBehaviour
 
     private float rotationSpeed;
     float g;
-
+    private float angleVectorsNew = 0;
     void Start()
     {
        agent = gameObject.GetComponent<NavMeshAgent>();
@@ -53,22 +53,37 @@ public class Patrol : MonoBehaviour
     private void RotateToTarget() // поворачивает в стороно цели со скоростью rotationSpeed
     {
         Vector3 lookVector = Target.position - agentTransform.position;
-        Debug.Log(agentTransform.rotation.y - lookVector.y);
 
-        //float g = agentTransform.rotation.y + lookVector.y;
-        if (agentTransform.rotation.y - lookVector.y <= agentTransform.rotation.y + 1){
-            gameObject.GetComponent<Animator>().SetBool("isL", true);
-        }
-        else if(agentTransform.rotation.y - lookVector.y >= agentTransform.rotation.y - 1)
-        {
+
+        Vector3 agentPos = agentTransform.position - new Vector3(agentTransform.position.x, agentTransform.position.y, agentTransform.position.z + 1);
+        //Debug.Log(agentPos);
+
+        float scalarProductVectors = lookVector.x * agentPos.x + lookVector.z * agentPos.z;
+        float vectorModules1 = Mathf.Sqrt(Mathf.Pow(lookVector.x, 2.0f) + Mathf.Pow(lookVector.z, 2.0f));
+        float vectorModules2 = Mathf.Sqrt(Mathf.Pow(agentPos.x, 2.0f) + Mathf.Pow(agentPos.z, 2.0f));       
+
+        float angleVectors = scalarProductVectors / (vectorModules1 * vectorModules2);
+
+
+        
+        angleVectorsNew = angleVectorsNew + angleVectors;
+
+        Debug.Log(angleVectorsNew);
+
+        if (angleVectorsNew <= -30){
             gameObject.GetComponent<Animator>().SetBool("isR", true);
+
+        }
+        else if(angleVectorsNew >= 30)
+        {
+            gameObject.GetComponent<Animator>().SetBool("isL", true);
             
         }//*/
         
 
         //раскомитеть
-        /*lookVector.y = 0;
-        if (lookVector == Vector3.zero) return;
+        //lookVector.y = 0;
+        /*if (lookVector == Vector3.zero) return;
 
         agentTransform.rotation = Quaternion.RotateTowards
             (
