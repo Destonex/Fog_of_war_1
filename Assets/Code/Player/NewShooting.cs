@@ -5,34 +5,40 @@ using UnityEngine.UI;
 
 public class NewShooting : MonoBehaviour
 {
-    public Animation sniper;
+    private Animation sniper;
 
     public float damage = 21f;
     public float fireRate = 1f;
     public float force = 155f;
     public float range = 15f;
     public ParticleSystem muzzleFlash;
-    public Transform bulletSpawn;
     public AudioClip shotSFX;
-    public AudioSource _audioSource;
     public GameObject[] hitEffect = new GameObject[5];
+    public Text Ammo;
     
-    public GameObject _cam;
-        //public Camera _cam;
+    private AudioSource _audioSource;
     private float nextFire = 0f;
     private int colAmmo = 5;
-    public Text Ammo;
     private int n;
     private GameObject impact;
-
+    private Transform _cam;
     private RegistrationHits registrationHits;
-    public int t1 = 0;
-    public int t2 = 0;
-    public int t3 = 0;
+    internal int t1 = 0;
+    internal int t2 = 0;
+    internal int t3 = 0;
 
- void Update()
+    void Start()
+    {
+        gameObject.GetComponent<AudioSource>().clip = shotSFX;
+        _audioSource = gameObject.GetComponent<AudioSource>();
+        _cam = transform.parent.GetComponent<Transform>();
+        sniper = gameObject.GetComponent<Animation>(); 
+    }
+
+    void Update()
     {
         Ammo.text = colAmmo.ToString();
+        //Ammo.text = n.ToString();
         Anim();
         if(Input.GetButtonDown("Fire1") && Time.time > nextFire && !sniper.IsPlaying("Fire") && colAmmo !=0 && !sniper.IsPlaying("StartReload") && !sniper.IsPlaying("EndReload") && !sniper.IsPlaying("ContinuationReload"))
         {
@@ -41,12 +47,15 @@ public class NewShooting : MonoBehaviour
         }
     }
 
-void Anim(){
-    if(!sniper.IsPlaying("Fire") && !sniper.IsPlaying("StartReload") && !sniper.IsPlaying("EndReload") && !sniper.IsPlaying("ContinuationReload")){
+    void Anim()
+    {
+        if(!sniper.IsPlaying("Fire") && !sniper.IsPlaying("StartReload") && !sniper.IsPlaying("EndReload") && !sniper.IsPlaying("ContinuationReload")){
             sniper.Play("Idle");
-        if(colAmmo < 5){
-            if(Input.GetKeyDown("r")){
-                n=0;
+            if(colAmmo < 5)
+            {
+                if(Input.GetKeyDown("r")){
+                    n=0;
+                    
                     /*     if(colAmmo < 5){
                         sniper.GetComponent<Animation>().Stop();
                         sniper.GetComponent<Animation>().Play("Reload1");
@@ -66,21 +75,20 @@ void Anim(){
                     n++;*/
                     sniper.Stop();
                     sniper.Play("StartReload");
-
                     for (int i = 0; i < 4 - colAmmo; i++){
                         if(4 - colAmmo != colAmmo-1)
                             sniper.PlayQueued("ContinuationReload");
-                        n++;
+                            n++;
                     }
                     sniper.PlayQueued("EndReload");
                     n++;
 
                     colAmmo = colAmmo + n; 
-            }
+                }
                     
+            }
         }
     }
-}
 
     void Shoot()
     {
@@ -92,6 +100,10 @@ void Anim(){
             }
 
         _audioSource.PlayOneShot(shotSFX);
+        
+        //gameObject.GetComponent<AudioSource>().clip.PlayOneShot(shotSFX);
+        //gameObject.audio.clip.PlayOneShot(shotSFX);
+
 
         muzzleFlash.Play();
         RaycastHit hit;
