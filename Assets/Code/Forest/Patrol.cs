@@ -66,7 +66,7 @@ public class Patrol : MonoBehaviour
 
 
         
-        angleVectorsNew = angleVectorsNew + angleVectors;
+        angleVectorsNew = /*angleVectorsNew +*/ angleVectors;
 
         Debug.Log(angleVectorsNew);
 
