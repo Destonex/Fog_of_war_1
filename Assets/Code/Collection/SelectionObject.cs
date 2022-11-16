@@ -30,6 +30,12 @@ public class SelectionObject : MonoBehaviour
         TextNicholasCathedral.SetActive(true);
         Tube.SetActive(false);
         TextTube.SetActive(false);
+        DomKrasnoyArmy.SetActive(false);
+        TextDomKrasnoyArmy.SetActive(false);
+        CommandantsOffice.SetActive(false);
+        TextCommandantsOffice.SetActive(false);
+        soldiersClub.SetActive(false);
+        TextDom.SetActive(false);
     }
 
     public void f_Tube(){
@@ -37,7 +43,59 @@ public class SelectionObject : MonoBehaviour
         TextNicholasCathedral.SetActive(false);
         Tube.SetActive(true);
         TextTube.SetActive(true);
+        DomKrasnoyArmy.SetActive(false);
+        TextDomKrasnoyArmy.SetActive(false);
+        CommandantsOffice.SetActive(false);
+        TextCommandantsOffice.SetActive(false);
+        soldiersClub.SetActive(false);
+        TextDom.SetActive(false);
     }
+
+    public void f_DomKrasnoyArmy() {
+
+        DomKrasnoyArmy.SetActive(true);
+        TextDomKrasnoyArmy.SetActive(true);
+        NicholasCathedral.SetActive(false);
+        TextNicholasCathedral.SetActive(false);
+        Tube.SetActive(false);
+        TextTube.SetActive(false);
+        CommandantsOffice.SetActive(false);
+        TextCommandantsOffice.SetActive(false);
+        soldiersClub.SetActive(false);
+        TextDom.SetActive(false);
+    }
+
+    public void f_CommandantsOffice() {
+
+        CommandantsOffice.SetActive(true);
+        TextCommandantsOffice.SetActive(true);
+        DomKrasnoyArmy.SetActive(false);
+        TextDomKrasnoyArmy.SetActive(false);
+        NicholasCathedral.SetActive(false);
+        TextNicholasCathedral.SetActive(false);
+        Tube.SetActive(false);
+        TextTube.SetActive(false);
+        soldiersClub.SetActive(false);
+        TextDom.SetActive(false);
+
+
+    }
+
+    public void f_SoldiersClub() {
+
+        CommandantsOffice.SetActive(false);
+        TextCommandantsOffice.SetActive(false);
+        DomKrasnoyArmy.SetActive(false);
+        TextDomKrasnoyArmy.SetActive(false);
+        NicholasCathedral.SetActive(false);
+        TextNicholasCathedral.SetActive(false);
+        Tube.SetActive(false);
+        TextTube.SetActive(false);
+        soldiersClub.SetActive(true);
+        TextDom.SetActive(true);
+    }
+
+
 
     public void f_Exit_Menu(){
       SceneManager.LoadScene("Menu3d");
