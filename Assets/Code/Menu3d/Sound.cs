@@ -14,9 +14,6 @@ public class Sound : MonoBehaviour
     void Start()
     {
         audioSrc = GetComponent<AudioSource>();
-       
-
-
         if (PlayerPrefs.HasKey("Volum"))
         {
             musicVolume = PlayerPrefs.GetFloat("Volum");

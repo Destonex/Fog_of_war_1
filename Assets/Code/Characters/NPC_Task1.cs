@@ -6,14 +6,7 @@ public class NPC_Task1 : MonoBehaviour
 {
     public bool EndDialog;
     public GameObject Dialog3;
-
     public GameObject PressStart;
-
-
-    void Start()
-    {
-
-    }
 
     void Update()
     {

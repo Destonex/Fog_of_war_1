@@ -38,7 +38,6 @@ public class NewShooting : MonoBehaviour
     void Update()
     {
         Ammo.text = colAmmo.ToString();
-        //Ammo.text = n.ToString();
         Anim();
         if(Input.GetButtonDown("Fire1") && Time.time > nextFire && !sniper.IsPlaying("Fire") && colAmmo !=0 && !sniper.IsPlaying("StartReload") && !sniper.IsPlaying("EndReload") && !sniper.IsPlaying("ContinuationReload"))
         {
@@ -53,32 +52,16 @@ public class NewShooting : MonoBehaviour
             sniper.Play("Idle");
             if(colAmmo < 5)
             {
-                if(Input.GetKeyDown("r")){
+                if(Input.GetKeyDown("r"))
+                {
                     n=0;
-                    
-                    /*     if(colAmmo < 5){
-                        sniper.GetComponent<Animation>().Stop();
-                        sniper.GetComponent<Animation>().Play("Reload1");
-                        colAmmo++;
-                        }
-                        }
-                        else if(Input.GetKeyDown("r") && colAmmo == 0)
-                    {*/
-                /*sniper.GetComponent<Animation>().Stop();
-                for (int i = 0; i < 4 - colAmmo; i++){
-                    if(4 - colAmmo != colAmmo-1)
-                        sniper.GetComponent<Animation>().PlayQueued("Reload2");
-                    n++;
-                    
-                    }
-                    sniper.GetComponent<Animation>().PlayQueued("Reload1");
-                    n++;*/
                     sniper.Stop();
                     sniper.Play("StartReload");
-                    for (int i = 0; i < 4 - colAmmo; i++){
+                    for (int i = 0; i < 4 - colAmmo; i++)
+                    {
                         if(4 - colAmmo != colAmmo-1)
                             sniper.PlayQueued("ContinuationReload");
-                            n++;
+                        n++;
                     }
                     sniper.PlayQueued("EndReload");
                     n++;
@@ -100,11 +83,6 @@ public class NewShooting : MonoBehaviour
             }
 
         _audioSource.PlayOneShot(shotSFX);
-        
-        //gameObject.GetComponent<AudioSource>().clip.PlayOneShot(shotSFX);
-        //gameObject.audio.clip.PlayOneShot(shotSFX);
-
-
         muzzleFlash.Play();
         RaycastHit hit;
 
@@ -140,10 +118,6 @@ public class NewShooting : MonoBehaviour
             {
                 hit.rigidbody.AddForce(-hit.normal * force);
             }
-        
-            
-            
         }
     }
-
 }

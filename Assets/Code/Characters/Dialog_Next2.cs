@@ -12,11 +12,6 @@ public class Dialog_Next2 : MonoBehaviour
 	private bool isText1 = true;
 	public NPC_Task1 npc_tallkScript;
 
-	void Start()
-	{
-
-	}
-
 	void Update()
 	{
 

@@ -11,6 +11,7 @@ public class Coordinates : MonoBehaviour
     float x;
     float y;
     float z;
+
     void Start()
     {
         X.text = "0";
@@ -18,12 +19,12 @@ public class Coordinates : MonoBehaviour
         Z.text = "0";
     }
 
-    // Update is called once per frame
     void Update()
     {
         x = gameObject.transform.position.x;
         y = gameObject.transform.position.y;
         z = gameObject.transform.position.z;
+        
         X.text = x.ToString();
         Y.text = y.ToString();
         Z.text = z.ToString();

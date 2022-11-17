@@ -16,12 +16,9 @@ public class Graphics : MonoBehaviour
         Screen.fullScreen = true;
         toggle.isOn = false;
 
-
         //Graphics
         graphics.ClearOptions();
        graphics.AddOptions(QualitySettings.names.ToList());
-        // dropDown.value = QualitySettings.GetQualityLevel(); //������� ��� � Unity
-        // dropDown.value = 2;//������� medium
 
         //Resolution
         Resolution[] resolution = Screen.resolutions;
@@ -30,7 +27,6 @@ public class Graphics : MonoBehaviour
 
         for (int i = 0; i < res.Length; i++)
         {
-            // strRes[i] = res[i].width.ToString() + "x" + res[i].height.ToString();//����������� ��� Ghz
              strRes[i] = res[i].ToString();
         }
         resol.ClearOptions();
@@ -65,7 +61,8 @@ public class Graphics : MonoBehaviour
         }
     }
 
-    public void SetQuality(){
+    public void SetQuality()
+    {
         QualitySettings.SetQualityLevel(graphics.value);
         PlayerPrefs.SetInt("Quality", graphics.value);
     }

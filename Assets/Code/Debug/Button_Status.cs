@@ -27,10 +27,6 @@ public class Button_Status : MonoBehaviour
     public GodmodeScript godmodeScript;
     public GameObject toggle_Pause;
     public PauseScript PauseScript;
-    void Start()
-    {
-        
-    }
 
     void Update()
     {
@@ -40,15 +36,13 @@ public class Button_Status : MonoBehaviour
             toggle_fps.SetActive(true);
 
 
-        if (button_canvas.vsync == false){
+        if (button_canvas.vsync == false)
             toggle_VSync.SetActive(false);
-        }   
-        else{
+        else
             toggle_VSync.SetActive(true);
-        }
 
 
-         if(button_canvas.postProcessVolume.isGlobal == true)
+        if(button_canvas.postProcessVolume.isGlobal == true)
             toggle_ProcessVolume.SetActive(false);
         else
             toggle_ProcessVolume.SetActive(true);
@@ -58,63 +52,48 @@ public class Button_Status : MonoBehaviour
             toggle_Audio.SetActive(true);
         else
             toggle_Audio.SetActive(false);
-
         
+
         if(button_canvas.weaponScript.enabled == true)
             toggle_Weapon.SetActive(false);
         else
             toggle_Weapon.SetActive(true);
 
 
-        if(button_canvas.coordinates.activeSelf == true){
+        if(button_canvas.coordinates.activeSelf == true)
             toggle_Coordinate.SetActive(true);
-        }
-        else{
+        else
             toggle_Coordinate.SetActive(false);
-        }
 
-        if (shadedWireframes.WireframeIndicator==true)
-        {
+
+        if (shadedWireframes.WireframeIndicator==true)       
             toggle_Wireframe.SetActive(false);
-        }
         else if (shadedWireframes.WireframeIndicator==false)
-        {
             toggle_Wireframe.SetActive(true);
-        }
 
-        if(noClipScript.EmptyNoclip.activeInHierarchy == true){
+
+        if(noClipScript.EmptyNoclip.activeInHierarchy == true)
             toggle_Noclip.SetActive(false);
-        }
         else
-        {
             toggle_Noclip.SetActive(true);
-        }
 
-        if(overlayToggleScript.EmptyOverlayToggle.activeInHierarchy){
+
+        if(overlayToggleScript.EmptyOverlayToggle.activeInHierarchy)
             toggle_Overlay.SetActive(false);            
-        }
         else
-        {
-            toggle_Overlay.SetActive(true);         
-        }
+            toggle_Overlay.SetActive(true);   
+
 
         if (godmodeScript.EmptyGodmode.activeInHierarchy == true)
-        {
             toggle_Godmode.SetActive(false);
-        }
         else
-        {
             toggle_Godmode.SetActive(true);
-        }
+
 
         if (PauseScript.SmallCanvas.activeInHierarchy == true)
-        {
             toggle_Pause.SetActive(true);
-        }
         else
-        {
             toggle_Pause.SetActive(false);
-        }
     }    
 }
 

@@ -14,12 +14,7 @@ public class Dialog_Next : MonoBehaviour
 	public NPC_Task npc_tallkScript;
 	public bool end_Finish;
 	public GameObject Obgect_Quest;
-
 	public bool active;
-	void Start()
-	{
-
-	}
 
 	void Update()
 	{
@@ -40,14 +35,11 @@ public class Dialog_Next : MonoBehaviour
 				isText1 = true;
 				
 				Obgect_Quest.SetActive(true);
-
 				Text1.SetActive(true);
 				Text2.SetActive(false);
 				Press1.SetActive(true);
 				Press2.SetActive(true);
 				Name.SetActive(true);
-				//npc_tallkScript.move.GetComponent<FirstPersonController>().enabled = true;
-				//npc_tallkScript.move.GetComponent<Rigidbody>().;
 				npc_tallkScript.gameObject.GetComponent<Animator>().SetBool("Talking", false);
 			}
 			else
@@ -61,7 +53,6 @@ public class Dialog_Next : MonoBehaviour
 		{
 			Text1.SetActive(true);
 			Text2.SetActive(false);
-
 			Press1.SetActive(true);
 			Press2.SetActive(true);
 			Name.SetActive(true);
@@ -70,49 +61,9 @@ public class Dialog_Next : MonoBehaviour
 		{
 			Text1.SetActive(false);
 			Text2.SetActive(true);
-
 			Press1.SetActive(false);
 			Press2.SetActive(true);
 			Name.SetActive(true);
 		}
 	}
-
-	//void Update()
-	//{
-
-	//	if (Input.GetKey("f"))
-	//	{
-	//		isText1 = false;
-	//	}
-	//	else if (Input.GetKey("r"))
-	//	{
-	//		npc_tallkScript.EndDialog = true;
-	//		isText1 = true;
-	//		Text1.SetActive(true);
-	//		Text2.SetActive(false);
-
-	//		Press1.SetActive(true);
-	//		Press2.SetActive(true);
-	//		Name.SetActive(true);
-	//	}
-
-	//	if (isText1 == true)
-	//	{
-	//		Text1.SetActive(true);
-	//		Text2.SetActive(false);
-
-	//		Press1.SetActive(true);
-	//		Press2.SetActive(true);
-	//		Name.SetActive(true);
-	//	}
-	//	else
-	//	{
-	//		Text1.SetActive(false);
-	//		Text2.SetActive(true);
-
-	//		Press1.SetActive(false);
-	//		Press2.SetActive(true);
-	//		Name.SetActive(true);
-	//	}
-	//}
 }

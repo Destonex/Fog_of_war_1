@@ -25,7 +25,8 @@ public class SelectionObject : MonoBehaviour
     public GameObject soldiersClub;
     public GameObject TextDom;
 
-    public void f_NicholasCathedral(){
+    public void f_NicholasCathedral()
+    {
         NicholasCathedral.SetActive(true);
         TextNicholasCathedral.SetActive(true);
         Tube.SetActive(false);
@@ -38,7 +39,8 @@ public class SelectionObject : MonoBehaviour
         TextDom.SetActive(false);
     }
 
-    public void f_Tube(){
+    public void f_Tube()
+    {
         NicholasCathedral.SetActive(false);
         TextNicholasCathedral.SetActive(false);
         Tube.SetActive(true);
@@ -51,8 +53,8 @@ public class SelectionObject : MonoBehaviour
         TextDom.SetActive(false);
     }
 
-    public void f_DomKrasnoyArmy() {
-
+    public void f_DomKrasnoyArmy() 
+    {
         DomKrasnoyArmy.SetActive(true);
         TextDomKrasnoyArmy.SetActive(true);
         NicholasCathedral.SetActive(false);
@@ -65,8 +67,8 @@ public class SelectionObject : MonoBehaviour
         TextDom.SetActive(false);
     }
 
-    public void f_CommandantsOffice() {
-
+    public void f_CommandantsOffice()
+    {
         CommandantsOffice.SetActive(true);
         TextCommandantsOffice.SetActive(true);
         DomKrasnoyArmy.SetActive(false);
@@ -77,12 +79,10 @@ public class SelectionObject : MonoBehaviour
         TextTube.SetActive(false);
         soldiersClub.SetActive(false);
         TextDom.SetActive(false);
-
-
     }
 
-    public void f_SoldiersClub() {
-
+    public void f_SoldiersClub() 
+    {
         CommandantsOffice.SetActive(false);
         TextCommandantsOffice.SetActive(false);
         DomKrasnoyArmy.SetActive(false);
@@ -95,18 +95,8 @@ public class SelectionObject : MonoBehaviour
         TextDom.SetActive(true);
     }
 
-
-
-    public void f_Exit_Menu(){
+    public void f_Exit_Menu()
+    {
       SceneManager.LoadScene("Menu3d");
     }
-   /* void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }*/
 }

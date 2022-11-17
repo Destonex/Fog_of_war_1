@@ -5,44 +5,42 @@ using UnityEngine.UI;
 
 public class NoClipScript : MonoBehaviour
 {
-
-
-   public GameObject EmptyNoclip;
-   private Vector3 _angles;
-   public float speed = 0.55f;
-   public float fastSpeed = 1.25f;
-   public float mouseSpeed = 2.5f;
-
+    public GameObject EmptyNoclip;
+    private Vector3 _angles;
+    public float speed = 0.55f;
+    public float fastSpeed = 1.25f;
+    public float mouseSpeed = 2.5f;
     public CharacterController cc;
-   public void Start()
+   
+    public void Start()
     {
         cc = GetComponent<CharacterController>();
     }
  
-   void Update() {
-    if(!EmptyNoclip.activeInHierarchy)
+    public void Update() 
     {
-        cc.enabled=false; 
-        NewCC();
-        
+        if(!EmptyNoclip.activeInHierarchy)
+        {
+            cc.enabled=false; 
+            NewCC();
+        }
+        else if (EmptyNoclip.activeInHierarchy)
+        {
+            cc.enabled=true; 
+        }
     }
-    else if (EmptyNoclip.activeInHierarchy)
-    {
-        cc.enabled=true; 
-        
-    }
-   }
 
-   public void NoclipButtonClick()
-   {
-        if(EmptyNoclip.activeInHierarchy == true){
+    public void NoclipButtonClick()
+    {
+        if(EmptyNoclip.activeInHierarchy == true)
+        {
             EmptyNoclip.SetActive(false);
         }
         else
         {
             EmptyNoclip.SetActive(true);
         }
-   }
+    }
 
    void NewCC()
    {

@@ -6,14 +6,8 @@ public class Event_Play : MonoBehaviour
 {
     public bool Quest1;
     public GameObject Text1;
-
     public bool end_Quest1;
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void Update()
     {
         if (end_Quest1 == false)

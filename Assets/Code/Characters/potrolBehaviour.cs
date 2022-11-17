@@ -16,9 +16,9 @@ public class potrolBehaviour : StateMachineBehaviour
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-       timer = 0;
-       Transform pointsObject = GameObject.FindGameObjectWithTag("Points").transform;
-       foreach (Transform t in pointsObject)
+        timer = 0;
+        Transform pointsObject = GameObject.FindGameObjectWithTag("Points").transform;
+        foreach (Transform t in pointsObject)
             points.Add(t);
 
         agent = animator.GetComponent<NavMeshAgent>();
@@ -31,15 +31,10 @@ public class potrolBehaviour : StateMachineBehaviour
         if(i == points.Count)
             i = 0;
 
-        if (agent.remainingDistance <= agent.stoppingDistance){                   
+        if (agent.remainingDistance <= agent.stoppingDistance)
+        {                   
             agent.SetDestination(points[i++].position);
         }
-
-
-    //    timer += Time.deltaTime;
-    //    if (timer > 30){
-    //     animator.SetBool("isPotroling", false);      
-    //     }
     }
 
 
@@ -48,4 +43,4 @@ public class potrolBehaviour : StateMachineBehaviour
        agent.SetDestination(agent.transform.position);
     }
 
-}//*/
+}

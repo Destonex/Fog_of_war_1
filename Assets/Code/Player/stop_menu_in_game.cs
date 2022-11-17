@@ -18,8 +18,10 @@ public class stop_menu_in_game : MonoBehaviour
     Player.GetComponent<FirstPersonController>().enabled = true;  
   }
 
-  public void Update() {
-    if (Input.GetKeyDown(button) && active == false) {
+  public void Update() 
+  {
+    if (Input.GetKeyDown(button) && active == false) 
+    {
       Time.timeScale = 0.0f;
       Stop_menu.SetActive(true);
       Cursor.visible = true;
@@ -27,7 +29,8 @@ public class stop_menu_in_game : MonoBehaviour
       Cursor.lockState = CursorLockMode.None;
       active = true;
     }
-    else if (Input.GetKeyDown(button) && active == true){
+    else if (Input.GetKeyDown(button) && active == true)
+    {
       Cursor.visible = false;
       Time.timeScale = 1.0f;
       Stop_menu.SetActive(false);
@@ -35,19 +38,22 @@ public class stop_menu_in_game : MonoBehaviour
       active= false;
     }
   }
-  public void Exit(){
+  public void Exit()
+  {
     SceneManager.LoadScene("Loading");
 	  loading_scene_slider.sceneID = 0;
   }
 
-  public void Resume(){
+  public void Resume()
+  {
     Cursor.visible = false;
     Time.timeScale = 1.0f;
     Stop_menu.SetActive(false);
     Player.GetComponent<FirstPersonController>().enabled = true;    
   }
  
-  public void Restart(){
+  public void Restart()
+  {
     SceneManager.LoadScene(SceneManager.GetActiveScene().name);
   }
 }

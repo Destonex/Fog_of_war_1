@@ -15,7 +15,7 @@ public class RegistrationHits : MonoBehaviour
     private ObgectQuest obgectQuest;
     public NewShooting newShooting;
     public GameObject Ammo;
-    // Start is called before the first frame update
+    
     void Start()
     {
         target1.SetActive(false);
@@ -24,14 +24,14 @@ public class RegistrationHits : MonoBehaviour
         Ammo.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         tt1 = newShooting.t1; 
         tt2 = newShooting.t2;
         tt3 = newShooting.t3; 
 
-       if(mosin.activeSelf == true){
+       if(mosin.activeSelf == true)
+       {
         target1.SetActive(true);
         target2.SetActive(true);
         target3.SetActive(true);

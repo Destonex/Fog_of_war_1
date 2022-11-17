@@ -8,11 +8,6 @@ public class Health_Player : MonoBehaviour
     public int Health = 100;
     public Slider slider;
     public Text hp;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     void Update()
     {

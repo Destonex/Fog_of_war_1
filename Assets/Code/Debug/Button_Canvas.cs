@@ -14,21 +14,13 @@ public class Button_Canvas : MonoBehaviour
 {
     public PostProcessVolume postProcessVolume; 
     public NewShooting weaponScript;
-   // public DrawCameraMode k; 
     public GameObject fpss;
     public GameObject fps;
     public GameObject camera;
-
     public GameObject fon;
     public GameObject cd;
-
     public GameObject weapon;
-    //public GameObject canvas;
-
     public GameObject coordinates;
-    
-    //public GameObject Wireframe;
-    
     public bool vsync = false;
     bool audio = false;
     public GameObject[] MRSV;
@@ -39,10 +31,10 @@ public class Button_Canvas : MonoBehaviour
     void Start()
     {
         fon.SetActive(false);
-        //camera.SetActive(false);
         fpss.SetActive(false);
         fps.SetActive(true);
         camera.SetActive(false);
+
         foreach(var i in MRSV)
             i.SetActive(false);
     }
@@ -54,39 +46,18 @@ public class Button_Canvas : MonoBehaviour
             fpss.SetActive(false);    
     }
     public void VSync(){
-         if (vsync == false){
+        if (vsync == false)
+        {
             Application.targetFrameRate = 30;
             vsync = true;
         }   
-        else{
+        else
+        {
             Application.targetFrameRate = 0;
             vsync = false; 
         }
-         /*   if (i == 0)
-            {
-                Application.targetFrameRate = 60;   
-                print(i);
-                i++;
-            }
-            else if (i == 1)
-            {
-              Application.targetFrameRate = 30; 
-              print(i);
-              i++;  
-            }
-            else if (i == 2) 
-            {
-                Application.targetFrameRate = 0;
-                print(i);
-                i++;
-            }
-             else if (i == 3)
-            {
-                i = 0; 
-            }*/
     }
 
-    // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown("`") && canvas == true) {
@@ -95,32 +66,34 @@ public class Button_Canvas : MonoBehaviour
             t=true;
             fps.SetActive(false);
             camera.SetActive(true);
+
             foreach(var i in MRSV)
                 i.SetActive(true);
             canvas = false;
-            //fps.SetActive(false);
-            //post_process.SetActive(true);
         }
-        else if(Input.GetKeyDown("`") && canvas == false){
+        else if(Input.GetKeyDown("`") && canvas == false)
+        {
             fon.SetActive(false);
-                    Time.timeScale = 1;
-                t=false;
-                fps.SetActive(true);
-                camera.SetActive(false);
+            Time.timeScale = 1;
+            t=false;
+            fps.SetActive(true);
+            camera.SetActive(false);
+
             foreach(var i in MRSV)
                 i.SetActive(false);
             canvas = true;
         }
 
-        if(t==true){
+        if(t==true)
+        {
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
         }
-        else{
+        else
+        {
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
-        // Cursor.lockState = CursorLockMode.None;
     }
 
 
@@ -133,15 +106,18 @@ public class Button_Canvas : MonoBehaviour
 
     }
  
-    public void OnPreRender() {
+    public void OnPreRender() 
+    {
         GL.wireframe = true;
     }
 
-    public void Restart(){
+    public void Restart()
+    {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void Audio(){
+    public void Audio()
+    {
         if(cd.GetComponent<AudioListener>().enabled == true)
         {
             cd.GetComponent<AudioListener>().enabled = false;
@@ -154,24 +130,29 @@ public class Button_Canvas : MonoBehaviour
         }
     }
 
-    public void Weapon(){
-        if(weaponScript.enabled == true){
+    public void Weapon()
+    {
+        if(weaponScript.enabled == true)
+        {
             weaponScript.enabled = false;
             weapon.SetActive(false);
         }
-        else{
+        else
+        {
             weaponScript.enabled = true;
             weapon.SetActive(true);
         }
     }
 
-    public void Coordinate(){
-        if(coordinates.activeSelf == true){
+    public void Coordinate()
+    {
+        if(coordinates.activeSelf == true)
+        {
             coordinates.SetActive(false);
         }
-        else{
+        else
+        {
             coordinates.SetActive(true);
-            
         }
     }
 }

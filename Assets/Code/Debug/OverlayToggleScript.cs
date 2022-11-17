@@ -6,25 +6,12 @@ using UnityEngine.UI;
 public class OverlayToggleScript : MonoBehaviour
 {
     public GameObject EmptyOverlayToggle;
-
-    //public Canvas OverlayToggle;
     public GameObject OverlayToggle;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //OverlayToggle = GetComponent<Canvas>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
- 
-    }
-
     public void OverlayToggleButtonClick()
-   {
-        if(EmptyOverlayToggle.activeInHierarchy){
+    {
+        if(EmptyOverlayToggle.activeInHierarchy)
+        {
             EmptyOverlayToggle.SetActive(false);
             OverlayToggle.SetActive(false);
         }
@@ -33,5 +20,5 @@ public class OverlayToggleScript : MonoBehaviour
             EmptyOverlayToggle.SetActive(true);
             OverlayToggle.SetActive(true);
         }
-   }
+    }
 }

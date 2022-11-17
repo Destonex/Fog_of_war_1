@@ -13,22 +13,10 @@ public class NPC_Task : MonoBehaviour
     public Event_Play quest;
     public bool end_Finish;
     public GameObject move;
-
     public GameObject PressStart;
-
-
-    void Start()
-    {
-
-    }
 
     void Update()
     {
-        //if (quest.end_Quest1 == true)
-        //{
-        //   end_Finish = true;
-        //}
-
         if (EndDialog == true)
         {
             if (dialog_Next.active == false)
@@ -38,7 +26,6 @@ public class NPC_Task : MonoBehaviour
         if (end_Finish == true) 
         {
             quest.Quest1 = false;
-            //f_PressStart_Off();
         }
     }
 
@@ -55,8 +42,6 @@ public class NPC_Task : MonoBehaviour
             if (col.tag == "Player" && Input.GetKeyDown("e"))
             {
                 gameObject.GetComponent<Animator>().SetBool("Talking", true);
-                //move.GetComponent<FirstPersonController>().enabled = false;
-                //move.GetComponent<Rigidbody>().useGravity = false;
                 if (quest.Quest1 == false)
                 {
                     Dialog1.SetActive(true);
@@ -74,5 +59,4 @@ public class NPC_Task : MonoBehaviour
     {
         PressStart.SetActive(false);
     }
-
 }

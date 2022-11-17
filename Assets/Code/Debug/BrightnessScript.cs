@@ -7,12 +7,7 @@ public class BrightnessScript : MonoBehaviour
 {
     public Slider slider;
     public Light sceneLight;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    
     void Update()
     {
         sceneLight.intensity = slider.value;
