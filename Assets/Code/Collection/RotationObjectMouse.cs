@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class RotationObjectMouse : MonoBehaviour
 {
-    float rotSpeed = 20;
+    public float rotSpeed = 20;
     
-    void Update()
+    public void Update()
     {
        transform.Rotate(0, 0.1f, 0);
     }

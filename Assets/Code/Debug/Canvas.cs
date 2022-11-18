@@ -22,6 +22,7 @@ public class Canvas : MonoBehaviour
     public GameObject[] button_script;
     public GameObject[] button_visability;
     public LinkedList<GameObject> r = new LinkedList<GameObject>();
+
     private bool t;
 
     void Start()
@@ -33,14 +34,19 @@ public class Canvas : MonoBehaviour
 
         foreach(var i in MRSV)
             i.SetActive(false);
+
         foreach (var i in button_main)
             i.SetActive(false);
+
         foreach (var i in button_render)
-            i.SetActive(false); 
+            i.SetActive(false);
+
         foreach (var i in button_script)
             i.SetActive(false);
+
         foreach (var i in button_visability)
             i.SetActive(false);
+
     }
 
     void Update(){
@@ -51,9 +57,9 @@ public class Canvas : MonoBehaviour
             t=true;
             fps.SetActive(false);
             camera.SetActive(true);
-
             foreach(var i in MRSV)
                 i.SetActive(true);
+
         }
         else if(Input.GetKeyDown(keyCode1))
         {
@@ -62,7 +68,6 @@ public class Canvas : MonoBehaviour
             t=false;
             fps.SetActive(true);
             camera.SetActive(false);
-
             foreach(var i in MRSV)
                 i.SetActive(false);
 
@@ -77,6 +82,7 @@ public class Canvas : MonoBehaviour
 
             foreach (var i in button_visability)
                 i.SetActive(false);
+
         }
 
         if(t==true)
@@ -141,4 +147,5 @@ public class Canvas : MonoBehaviour
         foreach(var i in button_render)
             i.SetActive(false); 
     }
+    
 }

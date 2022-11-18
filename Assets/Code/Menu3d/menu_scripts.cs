@@ -19,6 +19,7 @@ public class menu_scripts : MonoBehaviour
    public string VillageDescription;
    public string PolotskDescription;
    public loading_scene_slider loadingSceneSlider;
+   
    private int selected;
 
     public void Start()

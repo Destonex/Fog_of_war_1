@@ -8,18 +8,18 @@ public class Coordinates : MonoBehaviour
     public Text X;
     public Text Y;
     public Text Z;
-    float x;
-    float y;
-    float z;
+    private float x;
+    private float y;
+    private float z;
 
-    void Start()
+    public void Start()
     {
         X.text = "0";
         Y.text = "0";
         Z.text = "0";
     }
 
-    void Update()
+    public void Update()
     {
         x = gameObject.transform.position.x;
         y = gameObject.transform.position.y;
@@ -29,4 +29,5 @@ public class Coordinates : MonoBehaviour
         Y.text = y.ToString();
         Z.text = z.ToString();
     }
+    
 }

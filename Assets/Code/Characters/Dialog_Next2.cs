@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Dialog_Next2 : MonoBehaviour
 {
+	private bool isText1 = true;
+	public NPC_Task1 npc_tallkScript;
 	public GameObject Text1;
 	public GameObject Text2;
 	public GameObject Name;
 	public GameObject Press1;
 	public GameObject Press2;
-	private bool isText1 = true;
-	public NPC_Task1 npc_tallkScript;
 
-	void Update()
+	public void Update()
 	{
 
 		if (Input.GetKey("f"))
@@ -25,7 +25,6 @@ public class Dialog_Next2 : MonoBehaviour
 			isText1 = true;
 			Text1.SetActive(true);
 			Text2.SetActive(false);
-
 			Press1.SetActive(true);
 			Press2.SetActive(true);
 			Name.SetActive(true);
@@ -35,7 +34,6 @@ public class Dialog_Next2 : MonoBehaviour
 		{
 			Text1.SetActive(true);
 			Text2.SetActive(false);
-
 			Press1.SetActive(true);
 			Press2.SetActive(true);
 			Name.SetActive(true);
@@ -44,10 +42,10 @@ public class Dialog_Next2 : MonoBehaviour
 		{
 			Text1.SetActive(false);
 			Text2.SetActive(true);
-
 			Press1.SetActive(false);
 			Press2.SetActive(true);
 			Name.SetActive(true);
 		}
+
 	}
 }

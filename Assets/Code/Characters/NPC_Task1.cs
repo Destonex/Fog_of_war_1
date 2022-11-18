@@ -8,7 +8,7 @@ public class NPC_Task1 : MonoBehaviour
     public GameObject Dialog3;
     public GameObject PressStart;
 
-    void Update()
+    public void Update()
     {
         if (EndDialog == true)
         {
@@ -17,13 +17,13 @@ public class NPC_Task1 : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider col)
+    public void OnTriggerEnter(Collider col)
     {
         EndDialog = false;
         PressStart.SetActive(true);
     }
 
-    void OnTriggerStay(Collider col)
+    public void OnTriggerStay(Collider col)
     {
         if (col.tag == "Player" && Input.GetKeyDown("e"))
         {
@@ -33,7 +33,7 @@ public class NPC_Task1 : MonoBehaviour
         }
     }
 
-    void OnTriggerExit(Collider col)
+    public void OnTriggerExit(Collider col)
     {
         PressStart.SetActive(false);
     }

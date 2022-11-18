@@ -12,11 +12,12 @@ public class RegistrationHits : MonoBehaviour
     public  int tt1 = 0;
     public int tt2 = 0;
     public int tt3 = 0;
-    private ObgectQuest obgectQuest;
     public NewShooting newShooting;
     public GameObject Ammo;
     
-    void Start()
+    private ObgectQuest obgectQuest;
+
+    public void Start()
     {
         target1.SetActive(false);
         target2.SetActive(false);
@@ -24,7 +25,7 @@ public class RegistrationHits : MonoBehaviour
         Ammo.SetActive(false);
     }
 
-    void Update()
+    public void Update()
     {
         tt1 = newShooting.t1; 
         tt2 = newShooting.t2;
@@ -47,17 +48,21 @@ public class RegistrationHits : MonoBehaviour
     {
         if(tt1<4)
             target1.GetComponent<Text>().text = "Первая мишень "+tt1+"/3";
+
     }
-    
+     
     public void f_HitTarget2()
     {
         if(tt2<4)
             target2.GetComponent<Text>().text = "Вторая мишень "+tt2+"/3";
+
     }
     
     public void f_HitTarget3()
     {
         if(tt3<4)
             target3.GetComponent<Text>().text = "Третья мишень "+tt3+"/3";
+
     }
+
 }

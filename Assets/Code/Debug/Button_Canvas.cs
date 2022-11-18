@@ -22,11 +22,12 @@ public class Button_Canvas : MonoBehaviour
     public GameObject weapon;
     public GameObject coordinates;
     public bool vsync = false;
-    bool audio = false;
     public GameObject[] MRSV;
+    
+    private bool audio = false;
     private int i=0;
     private bool t = false;
-    bool canvas = true;
+    private bool canvas = true;
 
     void Start()
     {
@@ -37,6 +38,7 @@ public class Button_Canvas : MonoBehaviour
 
         foreach(var i in MRSV)
             i.SetActive(false);
+
     }
 
     public void FPS_Count(){
@@ -45,6 +47,7 @@ public class Button_Canvas : MonoBehaviour
         else
             fpss.SetActive(false);    
     }
+
     public void VSync(){
         if (vsync == false)
         {
@@ -56,9 +59,10 @@ public class Button_Canvas : MonoBehaviour
             Application.targetFrameRate = 0;
             vsync = false; 
         }
+
     }
 
-    void Update()
+    public void Update()
     {
         if (Input.GetKeyDown("`") && canvas == true) {
             fon.SetActive(true);
@@ -66,9 +70,9 @@ public class Button_Canvas : MonoBehaviour
             t=true;
             fps.SetActive(false);
             camera.SetActive(true);
-
             foreach(var i in MRSV)
                 i.SetActive(true);
+
             canvas = false;
         }
         else if(Input.GetKeyDown("`") && canvas == false)
@@ -78,9 +82,9 @@ public class Button_Canvas : MonoBehaviour
             t=false;
             fps.SetActive(true);
             camera.SetActive(false);
-
             foreach(var i in MRSV)
                 i.SetActive(false);
+
             canvas = true;
         }
 
@@ -94,6 +98,7 @@ public class Button_Canvas : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
         }
+
     }
 
 
@@ -128,6 +133,7 @@ public class Button_Canvas : MonoBehaviour
             cd.GetComponent<AudioListener>().enabled = true;
             audio = false;
         }
+
     }
 
     public void Weapon()
@@ -142,6 +148,7 @@ public class Button_Canvas : MonoBehaviour
             weaponScript.enabled = true;
             weapon.SetActive(true);
         }
+
     }
 
     public void Coordinate()
@@ -154,7 +161,9 @@ public class Button_Canvas : MonoBehaviour
         {
             coordinates.SetActive(true);
         }
+
     }
+
 }
 
 

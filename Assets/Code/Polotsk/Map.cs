@@ -6,20 +6,22 @@ public class Map : MonoBehaviour
 {
     public GameObject qustion;
     public GameObject krug;
+
     public MapOpen Maptr;
 
-    void Start()
+    public void Start()
     {
         qustion.SetActive(true);
         krug.SetActive(false);
     }
 
-    void OnTriggerEnter(Collider col)
+    public void OnTriggerEnter(Collider col)
     {
         if(Maptr.Cube.activeSelf == false)
         {
             qustion.SetActive(false);
             krug.SetActive(true); 
         }
+        
     }
 }

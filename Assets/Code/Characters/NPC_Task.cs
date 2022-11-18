@@ -7,35 +7,38 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class NPC_Task : MonoBehaviour
 {
     public bool EndDialog;
-    public GameObject Dialog1;
-    public GameObject Dialog2;
+    public bool end_Finish;
     public Dialog_Next dialog_Next;
     public Event_Play quest;
-    public bool end_Finish;
+    public GameObject Dialog1;
+    public GameObject Dialog2;
     public GameObject move;
     public GameObject PressStart;
 
-    void Update()
+    public void Update()
     {
         if (EndDialog == true)
         {
             if (dialog_Next.active == false)
                 quest.Quest1 = true;
+
             Dialog1.SetActive(false);
         }
+
         if (end_Finish == true) 
         {
             quest.Quest1 = false;
         }
+
     }
 
-    void OnTriggerEnter(Collider col)
+    public void OnTriggerEnter(Collider col)
     {
         EndDialog = false;
         PressStart.SetActive(true);
     }
 
-    void OnTriggerStay(Collider col)
+    public void OnTriggerStay(Collider col)
     {
         if (EndDialog == false )
         {
@@ -50,13 +53,15 @@ public class NPC_Task : MonoBehaviour
                 {
                     Dialog2.SetActive(true);
                 }
+
                 PressStart.SetActive(false);
             }
         }
     }
 
-    void OnTriggerExit(Collider col)
+    public void OnTriggerExit(Collider col)
     {
         PressStart.SetActive(false);
     }
+
 }

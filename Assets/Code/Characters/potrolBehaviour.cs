@@ -9,10 +9,10 @@ using UnityEngine.SceneManagement;
 
 public class potrolBehaviour : StateMachineBehaviour
 {
-    float timer;
-    List<Transform> points = new List<Transform>();
-    NavMeshAgent agent;
-    int i = 0;
+    private float timer;
+    private List<Transform> points = new List<Transform>();
+    private NavMeshAgent agent;
+    private int i = 0;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {

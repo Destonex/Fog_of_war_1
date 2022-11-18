@@ -6,12 +6,13 @@ using System.Linq;
 
 public class Sound : MonoBehaviour
 {
-    private AudioSource audioSrc;
     public Slider slider;
+
+    private AudioSource audioSrc;
     private float musicVolume;
     private float vol;
 
-    void Start()
+    public void Start()
     {
         audioSrc = GetComponent<AudioSource>();
         if (PlayerPrefs.HasKey("Volum"))
@@ -24,9 +25,10 @@ public class Sound : MonoBehaviour
             musicVolume = 1f;
             slider.value = 1f;
         }
+
     }
 
-    void Update()
+    public void Update()
     {
         audioSrc.volume = musicVolume;
     }

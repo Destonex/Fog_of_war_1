@@ -9,7 +9,7 @@ public class Health_Player : MonoBehaviour
     public Slider slider;
     public Text hp;
 
-    void Update()
+    public void Update()
     {
         slider.value = Health;
         hp.text = string.Format("{0:0}", Health);

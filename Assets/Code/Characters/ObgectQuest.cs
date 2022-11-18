@@ -5,25 +5,26 @@ using UnityEngine;
 public class ObgectQuest : MonoBehaviour
 {
     public Event_Play Qevent;
-    public GameObject mosin;
     private Dialog_Next Text1;
+    public GameObject mosin;
     public GameObject PressStart;
     public GameObject map;
     
-    void Start()
+    public void Start()
     {
         mosin.SetActive(false);
     }
 
-    void OnTriggerEnter(Collider col)
+    public void OnTriggerEnter(Collider col)
     {
         if (col.tag == "Player")
         {
             PressStart.SetActive(true);
         }
+        
     }
 
-    void OnTriggerStay(Collider col)
+    public void OnTriggerStay(Collider col)
     {
         if (col.tag == "Player")
         {
@@ -35,10 +36,12 @@ public class ObgectQuest : MonoBehaviour
                 gameObject.SetActive(false);
                 map.SetActive(false);
             }
+
         }
+
     }
 
-    void OnTriggerExit(Collider col)
+    public void OnTriggerExit(Collider col)
     {
         PressStart.SetActive(false);
     }

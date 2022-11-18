@@ -7,15 +7,16 @@ using UnityStandardAssets.Characters.FirstPerson;
 public class PauseScript : MonoBehaviour
 {
     public GameObject SmallCanvas;
-    bool _indicator;
+    private bool _indicator;
     public GameObject Mosin;
 
-    void Update()
+    public void Update()
     {
         if (_indicator==true)
             Time.timeScale = 0;
         else
             Time.timeScale = 1;
+
     }
     
  

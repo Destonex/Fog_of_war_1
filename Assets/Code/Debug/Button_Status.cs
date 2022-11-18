@@ -11,6 +11,12 @@ using System.Text.RegularExpressions;
 public class Button_Status : MonoBehaviour 
 {
     public Button_Canvas button_canvas;
+    public ShadedWireframes shadedWireframes;
+    public NoClipScript noClipScript;
+    public OverlayToggleScript overlayToggleScript;
+    public GodmodeScript godmodeScript;
+    public PauseScript PauseScript;
+    
     public GameObject toggle_fps;
     public GameObject toggle_VSync;
     public GameObject toggle_ProcessVolume;
@@ -18,15 +24,10 @@ public class Button_Status : MonoBehaviour
     public GameObject toggle_Weapon;
     public GameObject toggle_Coordinate;
     public GameObject toggle_Wireframe;
-    public ShadedWireframes shadedWireframes;
     public GameObject toggle_Noclip;
-    public NoClipScript noClipScript;
     public GameObject toggle_Overlay;
-    public OverlayToggleScript overlayToggleScript;
     public GameObject toggle_Godmode;
-    public GodmodeScript godmodeScript;
     public GameObject toggle_Pause;
-    public PauseScript PauseScript;
 
     void Update()
     {

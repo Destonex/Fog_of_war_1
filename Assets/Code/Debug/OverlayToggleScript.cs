@@ -20,5 +20,7 @@ public class OverlayToggleScript : MonoBehaviour
             EmptyOverlayToggle.SetActive(true);
             OverlayToggle.SetActive(true);
         }
+        
     }
+
 }

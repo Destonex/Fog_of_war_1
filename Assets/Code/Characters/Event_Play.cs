@@ -8,7 +8,7 @@ public class Event_Play : MonoBehaviour
     public GameObject Text1;
     public bool end_Quest1;
 
-    void Update()
+    public void Update()
     {
         if (end_Quest1 == false)
         {
@@ -20,10 +20,12 @@ public class Event_Play : MonoBehaviour
             {
                 Text1.SetActive(false);
             }
+
         }
         else
         {
             Text1.SetActive(false);
         }
+        
     }
 }

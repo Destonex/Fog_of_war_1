@@ -4,26 +4,28 @@ using UnityEngine;
 
 public class MapOpen : MonoBehaviour
 {
-    public GameObject Map;
-    private bool active = false;
-    public GameObject Cube;
+  public GameObject Map;
+  public GameObject Cube;
+  
+  private bool active = false;
     
-    void Start()
-    {
-        Map.SetActive(false);
-    }
+  public void Start()
+  {
+    Map.SetActive(false);
+  }
 
-    void Update()
+  public void Update()
+  {
+    if (Input.GetKeyDown("m") && active == false && Cube.activeSelf == false)  
     {
-      if (Input.GetKeyDown("m") && active == false && Cube.activeSelf == false)  
-      {
-        Map.SetActive(true);
-        active = true;
-      }
-      else if (Input.GetKeyDown("m") && active == true)
-      {
-        Map.SetActive(false);
-        active= false;
-      }
+      Map.SetActive(true);
+      active = true;
     }
+    else if (Input.GetKeyDown("m") && active == true)
+    {
+      Map.SetActive(false);
+      active= false;
+    }
+    
+  }
 }

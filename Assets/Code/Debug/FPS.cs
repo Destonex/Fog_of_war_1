@@ -6,9 +6,10 @@ public class FPS : MonoBehaviour
 {
     public static float fps;
     
-    void OnGUI()
+    public void OnGUI()
     {
         fps = 1.0f / Time.deltaTime;
         GUILayout.Label("FPS: " + (int)fps);
     }
+    
 }

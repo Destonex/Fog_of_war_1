@@ -17,6 +17,7 @@ public class GodmodeScript : MonoBehaviour
         {
             hp.GetComponent<Health_Player>().enabled = true;
         }
+
     }
 
     public void GodmodeOn()
@@ -29,5 +30,7 @@ public class GodmodeScript : MonoBehaviour
         {
             EmptyGodmode.SetActive(true);
         }
+
     }
+    
 }

@@ -5,18 +5,19 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class Dialog_Next : MonoBehaviour
 {
+	public bool active;
+	public bool end_Finish;
+	public NPC_Task npc_tallkScript;
+	public GameObject Obgect_Quest;
 	public GameObject Text1;
 	public GameObject Text2;
 	public GameObject Name;
 	public GameObject Press1;
 	public GameObject Press2;
-	private bool isText1 = true;
-	public NPC_Task npc_tallkScript;
-	public bool end_Finish;
-	public GameObject Obgect_Quest;
-	public bool active;
 
-	void Update()
+	private bool isText1 = true;
+
+	public void Update()
 	{
 		if (Input.GetKey("f"))
 		{
@@ -47,6 +48,7 @@ public class Dialog_Next : MonoBehaviour
 				isText1 = true;
 				npc_tallkScript.end_Finish = true;
 			}
+
 		}
 
 		if (isText1 == true)
@@ -65,5 +67,6 @@ public class Dialog_Next : MonoBehaviour
 			Press2.SetActive(true);
 			Name.SetActive(true);
 		}
+
 	}
 }

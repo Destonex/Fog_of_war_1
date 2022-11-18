@@ -5,8 +5,8 @@ using UnityEngine.AI;
 
 public class idleBehaviour : StateMachineBehaviour
 {
-    float timer;
-    Transform player;
+    private float timer;
+    private Transform player;
 
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
@@ -21,5 +21,6 @@ public class idleBehaviour : StateMachineBehaviour
         {
             animator.SetBool("isPotroling", true);
         }
+        
     }
 }

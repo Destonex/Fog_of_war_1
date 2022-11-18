@@ -6,11 +6,12 @@ using UnityEngine.UI;
 public class NoClipScript : MonoBehaviour
 {
     public GameObject EmptyNoclip;
-    private Vector3 _angles;
     public float speed = 0.55f;
     public float fastSpeed = 1.25f;
     public float mouseSpeed = 2.5f;
     public CharacterController cc;
+
+    private Vector3 _angles;
    
     public void Start()
     {
@@ -28,6 +29,7 @@ public class NoClipScript : MonoBehaviour
         {
             cc.enabled=true; 
         }
+
     }
 
     public void NoclipButtonClick()
@@ -40,16 +42,18 @@ public class NoClipScript : MonoBehaviour
         {
             EmptyNoclip.SetActive(true);
         }
+
     }
 
-   void NewCC()
+   public void NewCC()
    {
     _angles.x -= Input.GetAxis("Mouse Y") * mouseSpeed;
     _angles.y += Input.GetAxis("Mouse X") * mouseSpeed;
     transform.eulerAngles = _angles;
     float moveSpeed = Input.GetKey(KeyCode.LeftShift) ? fastSpeed : speed;
-       transform.position +=
-           Input.GetAxis("Horizontal") * moveSpeed * transform.right +
-           Input.GetAxis("Vertical") * moveSpeed * transform.forward;
+    transform.position +=
+        Input.GetAxis("Horizontal") * moveSpeed * transform.right +
+          Input.GetAxis("Vertical") * moveSpeed * transform.forward;
    }
+   
 }

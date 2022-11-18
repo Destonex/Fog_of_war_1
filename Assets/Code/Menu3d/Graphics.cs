@@ -9,26 +9,24 @@ public class Graphics : MonoBehaviour
     public Dropdown graphics;
     public Dropdown resol;
     public Toggle toggle;
-    Resolution[] res;
 
-    void Start()
+    private Resolution[] res;
+
+    public void Start()
     {
         Screen.fullScreen = true;
         toggle.isOn = false;
 
-        //Graphics
+        
         graphics.ClearOptions();
-       graphics.AddOptions(QualitySettings.names.ToList());
-
-        //Resolution
+        graphics.AddOptions(QualitySettings.names.ToList());
         Resolution[] resolution = Screen.resolutions;
         res = resolution.Distinct().ToArray();
         string[] strRes = new string[res.Length];
 
         for (int i = 0; i < res.Length; i++)
-        {
-             strRes[i] = res[i].ToString();
-        }
+            strRes[i] = res[i].ToString();
+
         resol.ClearOptions();
         resol.AddOptions(strRes.ToList());
         
@@ -36,7 +34,6 @@ public class Graphics : MonoBehaviour
         {
             graphics.value = PlayerPrefs.GetInt("Quality");
             resol.value = PlayerPrefs.GetInt("Resolution");
-
             QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("Quality"));
             Screen.SetResolution(res[PlayerPrefs.GetInt("Resolution")].width, res[PlayerPrefs.GetInt("Resolution")].height, Screen.fullScreen);
             if (PlayerPrefs.GetInt("FullScreen") == 0)
@@ -49,16 +46,17 @@ public class Graphics : MonoBehaviour
                 Screen.fullScreen = true;
                 toggle.isOn = !Screen.fullScreen;
             }
+
         }
         else
         {
             graphics.value = QualitySettings.GetQualityLevel();
-           Screen.SetResolution(res[res.Length - 1].width, res[res.Length - 1].height, Screen.fullScreen);
+            Screen.SetResolution(res[res.Length - 1].width, res[res.Length - 1].height, Screen.fullScreen);
             resol.value = res.Length - 1;
-
             Screen.fullScreen = true;
             toggle.isOn = !Screen.fullScreen;
         }
+
     }
 
     public void SetQuality()
@@ -84,5 +82,7 @@ public class Graphics : MonoBehaviour
         {
             PlayerPrefs.SetInt("FullScreen", 0);
         }
+
     }
+
 }
