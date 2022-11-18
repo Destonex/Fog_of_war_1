@@ -70,11 +70,11 @@ public class Patrol : MonoBehaviour
 
         Debug.Log(angleVectorsNew);
 
-        if (angleVectorsNew <= -30){
+        if (angleVectorsNew <= 0,8660254038){
             gameObject.GetComponent<Animator>().SetBool("isR", true);
 
         }
-        else if(angleVectorsNew >= 30)
+        else if(angleVectorsNew >= 0,8660254038)
         {
             gameObject.GetComponent<Animator>().SetBool("isL", true);
             
