@@ -16,7 +16,7 @@ public class Button_Status : MonoBehaviour
     public OverlayToggleScript overlayToggleScript;
     public GodmodeScript godmodeScript;
     public PauseScript PauseScript;
-    
+
     public GameObject toggle_fps;
     public GameObject toggle_VSync;
     public GameObject toggle_ProcessVolume;
@@ -97,4 +97,3 @@ public class Button_Status : MonoBehaviour
             toggle_Pause.SetActive(false);
     }    
 }
-
