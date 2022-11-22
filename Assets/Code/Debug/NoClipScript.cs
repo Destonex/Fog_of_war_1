@@ -2,39 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityStandardAssets.Characters.FirstPerson;
+using UnityTemplateProjects;
 
 public class NoClipScript : MonoBehaviour
 {
     public GameObject EmptyNoclip;
-    public float speed = 0.55f;
-    public float fastSpeed = 1.25f;
-    public float mouseSpeed = 2.5f;
-    public CharacterController cc;
 
-    private Vector3 _angles;
+    public FirstPersonController firstPersonController;
+    public SimpleCameraController simpleCameraController;
    
     public void Start()
     {
-        cc = GetComponent<CharacterController>();
+        firstPersonController = gameObject.GetComponent<FirstPersonController>();
+        simpleCameraController = gameObject.GetComponentInChildren<SimpleCameraController>();
+
+        firstPersonController.enabled = true;
+        simpleCameraController.enabled = false;
     }
  
     public void Update() 
     {
-        if(!EmptyNoclip.activeInHierarchy)
+        if(EmptyNoclip.activeSelf)
         {
-            cc.enabled=false; 
-            NewCC();
+            firstPersonController.enabled = true;
+            simpleCameraController.enabled = false;
         }
-        else if (EmptyNoclip.activeInHierarchy)
+        else if (!EmptyNoclip.activeSelf)
         {
-            cc.enabled=true; 
+            firstPersonController.enabled = false;
+            simpleCameraController.enabled = true;
         }
 
     }
 
     public void NoclipButtonClick()
     {
-        if(EmptyNoclip.activeInHierarchy == true)
+        if(EmptyNoclip.activeSelf == true)
         {
             EmptyNoclip.SetActive(false);
         }
@@ -44,16 +48,5 @@ public class NoClipScript : MonoBehaviour
         }
 
     }
-
-   public void NewCC()
-   {
-    _angles.x -= Input.GetAxis("Mouse Y") * mouseSpeed;
-    _angles.y += Input.GetAxis("Mouse X") * mouseSpeed;
-    transform.eulerAngles = _angles;
-    float moveSpeed = Input.GetKey(KeyCode.LeftShift) ? fastSpeed : speed;
-    transform.position +=
-        Input.GetAxis("Horizontal") * moveSpeed * transform.right +
-          Input.GetAxis("Vertical") * moveSpeed * transform.forward;
-   }
    
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityStandardAssets.Characters.FirstPerson;
 
-public class stop_menu_in_game : MonoBehaviour
+public class StopMenu : MonoBehaviour
 {
   public KeyCode button;
   public GameObject Stop_menu;
