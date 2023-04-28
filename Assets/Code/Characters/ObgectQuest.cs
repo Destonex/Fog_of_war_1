@@ -10,9 +10,21 @@ public class ObgectQuest : MonoBehaviour
     public GameObject PressStart;
     public GameObject map;
     
+    public GameObject text;
+
     public void Start()
     {
         mosin.SetActive(false);
+        text.SetActive(false);
+        transform.GetComponent<BoxCollider>().enabled = false;
+    }
+
+    public void Update() 
+    {
+        if(text.activeSelf)
+        {
+            transform.GetComponent<BoxCollider>().enabled = true;
+        }
     }
 
     public void OnTriggerEnter(Collider col)
