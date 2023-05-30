@@ -87,37 +87,37 @@ public class NewShooting : MonoBehaviour
         {
             switch (hit.transform.gameObject.tag)
             {
-                case Wood:
+                case "Wood":
                     impact = Instantiate(hitEffect[0], hit.point, Quaternion.LookRotation(hit.normal));
                     break;
 
-                case Stone:
+                case "Stone":
                     impact = Instantiate(hitEffect[1], hit.point, Quaternion.LookRotation(hit.normal));
                     break;
 
-                case Metal:
+                case "Metal":
                     impact = Instantiate(hitEffect[2], hit.point, Quaternion.LookRotation(hit.normal));
                     break;
 
-                case Sand:
+                case "Sand":
                     impact = Instantiate(hitEffect[3], hit.point, Quaternion.LookRotation(hit.normal));
                     break;
 
-                case AI:
+                case "AI":
                     impact = Instantiate(hitEffect[4], hit.point, Quaternion.LookRotation(hit.normal));
                     break;
 
-                case Target1:
+                case "Target1":
                     t1++;
                     impact = Instantiate(hitEffect[0], hit.point, Quaternion.LookRotation(hit.normal));
                     break;
 
-                case Target2:
+                case "Target2":
                     t2++;
                     impact = Instantiate(hitEffect[0], hit.point, Quaternion.LookRotation(hit.normal));
                     break;
 
-                case Target3:
+                case "Target3":
                     t3++;
                     impact = Instantiate(hitEffect[0], hit.point, Quaternion.LookRotation(hit.normal));
                     break;
