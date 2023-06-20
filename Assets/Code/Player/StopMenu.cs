@@ -53,19 +53,18 @@ public class StopMenu : MonoBehaviour
       active= false;
     }
 
-
-        if(t==true)
-        {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-        }
-
+    if(t==true)
+    {
+      Cursor.lockState = CursorLockMode.None;
+      Cursor.visible = true;
+    }
+    else
+    {
+      Cursor.lockState = CursorLockMode.Locked;
+      Cursor.visible = false;
+    }
   }
+  
   public void Exit()
   {
     SceneManager.LoadScene("Loading");
