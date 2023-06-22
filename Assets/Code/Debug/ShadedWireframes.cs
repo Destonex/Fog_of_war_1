@@ -22,5 +22,10 @@ public class ShadedWireframes : MonoBehaviour
                GL.wireframe = true;
 
     }
+    public void OnPostRender()
+    {
+        if(WireframeIndicator==false)
+               GL.wireframe = false;
 
+    }
 }
