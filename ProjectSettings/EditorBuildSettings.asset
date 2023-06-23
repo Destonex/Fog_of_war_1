@@ -15,8 +15,8 @@ EditorBuildSettings:
     path: Assets/Scenes/Village.unity
     guid: 69d9f74e11f4f9847bddee055cafe763
   - enabled: 1
-    path: Assets/test/New Scene.unity
-    guid: 22f4765b46aa3b5458d6b0c1e6fe8dc4
+    path: Assets/Scenes/ResistanceMap.unity
+    guid: 5e1e9837bbe6add469c48924822bb689
   - enabled: 1
     path: Assets/Scenes/Collection.unity
     guid: 0ae2fa8b35f7ceb47aec0d02a3e58933
@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Polotsk_A1.unity
     guid: fa02a87f45ec28e4cb400e5445710067
+  - enabled: 1
+    path: Assets/test/New Scene.unity
+    guid: 22f4765b46aa3b5458d6b0c1e6fe8dc4
   m_configObjects: {}
