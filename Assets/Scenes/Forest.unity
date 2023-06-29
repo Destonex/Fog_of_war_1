@@ -7708,7 +7708,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 360420548}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 481, y: 25, z: -687}
+  m_LocalPosition: {x: 359, y: 25, z: -711}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19193,8 +19193,8 @@ RectTransform:
   m_Father: {fileID: 1313328425}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.30769232, y: 0}
+  m_AnchorMax: {x: 0.30769232, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -20461,7 +20461,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1179054448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21499,7 +21499,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1233272156}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1448, y: -52.2, z: 443}
+  m_LocalPosition: {x: 1063, y: -52.2, z: 590}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25159,7 +25159,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1506485250}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 964, y: -179, z: 1510}
+  m_LocalPosition: {x: 728, y: -179, z: 1269}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28831,7 +28831,7 @@ RectTransform:
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
+  m_AnchorMax: {x: 0.30769232, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 10, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -33792,7 +33792,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1981207864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 371, y: -184, z: 972}
+  m_LocalPosition: {x: -445, y: -75, z: 834}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41772,6 +41772,8 @@ MonoBehaviour:
   Health: 100
   slider: {fileID: 0}
   hp: {fileID: 0}
+  end: {fileID: 0}
+  camera: {fileID: 0}
 --- !u!114 &2654019383124489984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49095,6 +49097,8 @@ MonoBehaviour:
   Health: 100
   slider: {fileID: 0}
   hp: {fileID: 0}
+  end: {fileID: 0}
+  camera: {fileID: 0}
 --- !u!1 &7883902767396226534
 GameObject:
   m_ObjectHideFlags: 0
