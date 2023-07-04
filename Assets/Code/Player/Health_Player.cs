@@ -20,6 +20,8 @@ public class Health_Player : MonoBehaviour
             end.SetActive(true);
             camera.SetActive(true);
             gameObject.SetActive(false);
+                        Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }
