@@ -9,7 +9,8 @@ public class menu_scripts : MonoBehaviour
    public GameObject exitPanel;
    public GameObject settingPanel;
    public GameObject loadPanel;
-   public GameObject Button;
+   public GameObject titlesPanel;
+   public GameObject Buttons;
    public RawImage map_foto;
    public Texture Forest_foto;
    public Texture Village_foto;
@@ -74,41 +75,53 @@ public class menu_scripts : MonoBehaviour
     public void SettingPanel_true()
     {
       settingPanel.SetActive(true);  
-      Button.SetActive(false);
+      Buttons.SetActive(false);
     }
 
     public void SettingPanel_false()
     {
       settingPanel.SetActive(false);  
-      Button.SetActive(true);
+      Buttons.SetActive(true);
     }
 
     public void exitPanel_true()
     {
       exitPanel.SetActive(true);  
-      Button.SetActive(false);
+      Buttons.SetActive(false);
     }
 
     public void exitPanel_false()
     {
       exitPanel.SetActive(false);  
-      Button.SetActive(true);
+      Buttons.SetActive(true);
     }
 
     public void LoadPanel_true()
     {
       loadPanel.SetActive(true);  
-      Button.SetActive(false);
+      Buttons.SetActive(false);
     }
 
     public void LoadPanel_false()
     {
       loadPanel.SetActive(false);  
-      Button.SetActive(true);
+      Buttons.SetActive(true);
     }
 
     public void CollecthionScene()
     {
       SceneManager.LoadScene("Collection");
+    }
+
+    public void Titles_true()
+    {
+      Buttons.SetActive(false);
+      titlesPanel.SetActive(true);
+    }
+    
+    public void Titles_false()
+    {
+      Buttons.SetActive(true);
+      titlesPanel.SetActive(false);
     }
 }

@@ -48,7 +48,6 @@ public class Dialog_Next : MonoBehaviour
 				isText1 = true;
 				npc_tallkScript.end_Finish = true;
 			}
-
 		}
 
 		if (isText1 == true)

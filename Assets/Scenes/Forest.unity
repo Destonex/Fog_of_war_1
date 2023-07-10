@@ -11992,6 +11992,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 976819171052128728, guid: b9f60524e30ea5b4aa169fb9bfb10992, type: 3}
   m_PrefabInstance: {fileID: 8147052186454007289}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &637948380 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8147052184640354761, guid: b9f60524e30ea5b4aa169fb9bfb10992, type: 3}
+  m_PrefabInstance: {fileID: 8147052186454007289}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 637948373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dff4d8a7847c0f44a3e0a40303b2b23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &642406545 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8132993626496273747, guid: 843a1e98c70b1da40a9ed873ba6b1d65, type: 3}
@@ -24564,6 +24575,7 @@ MonoBehaviour:
   Dialog2: {fileID: 85229005}
   move: {fileID: 1277325928284644691}
   PressStart: {fileID: 1126903574}
+  registrationHits: {fileID: 637948380}
 --- !u!95 &1441208844
 Animator:
   serializedVersion: 5
