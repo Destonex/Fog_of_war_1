@@ -14,7 +14,7 @@ public class NPC_Task : MonoBehaviour
     public GameObject Dialog2;
     public GameObject move;
     public GameObject PressStart;
-
+    public RegistrationHits registrationHits;
     public void Update()
     {
         if (EndDialog == true)
@@ -40,7 +40,7 @@ public class NPC_Task : MonoBehaviour
 
     public void OnTriggerStay(Collider col)
     {
-        if (EndDialog == false )
+        if (EndDialog == false)
         {
             if (col.tag == "Player" && Input.GetKeyDown("e"))
             {
@@ -49,7 +49,7 @@ public class NPC_Task : MonoBehaviour
                 {
                     Dialog1.SetActive(true);
                 }
-                else if (quest.Quest1 == true)
+                else if (quest.Quest1 == true  && registrationHits.tt1 == 3 && registrationHits.tt2 == 3 && registrationHits.tt3 == 3)
                 {
                     Dialog2.SetActive(true);
                 }
