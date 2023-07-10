@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b743de1a-2eb1-4bbb-a105-568987e9d3ab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Characters/Dialog_Next.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Characters/Dialog_Next.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Code/Characters/NPC_Task.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Characters/NPC_Task.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Fog_of_war_1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Fog_of_war_1/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Code/Menu3d/menu_scripts.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Code/Menu3d/menu_scripts.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Forest.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Forest.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Menu3d.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Menu3d.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/ResistanceMap.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/ResistanceMap.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Texture/Polotsk/Props/Debris_V1.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Polotsk/Props/Debris_V1.tga.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Texture/Polotsk/Props/Rock_V2.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Polotsk/Props/Rock_V2.tga.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Texture/Polotsk/Props/Wood_V3.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Polotsk/Props/Wood_V3.tga.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Texture/Polotsk/Props/Wood_V4.tga.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Texture/Polotsk/Props/Wood_V4.tga.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
     </list>
@@ -22,6 +20,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Code/Polotsk/CatScena.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -76,7 +77,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1688994866030</updated>
-      <workItem from="1688994873524" duration="3804000" />
+      <workItem from="1688994873524" duration="4998000" />
+      <workItem from="1689015900993" duration="2931000" />
     </task>
     <servers />
   </component>

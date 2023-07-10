@@ -20,6 +20,7 @@ public class menu_scripts : MonoBehaviour
    public string VillageDescription;
    public string PolotskDescription;
    public loading_scene_slider loadingSceneSlider;
+   public KeyCode button;
    
    private int selected;
 
@@ -33,6 +34,9 @@ public class menu_scripts : MonoBehaviour
     {
       Cursor.visible = true;
       Cursor.lockState = CursorLockMode.None;
+      if (titlesPanel.activeSelf == true && Input.GetKeyDown(button))
+        Titles_false();
+
     }
     public void StartGame()
     {
